@@ -90,8 +90,10 @@ extension UserProfileViewController {
             titleLabel.translatesAutoresizingMaskIntoConstraints = false
             contentView.addSubview(titleLabel)
             NSLayoutConstraint.activate([
-                titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-                titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+                titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
+                titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+                titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
             ])
         }
         

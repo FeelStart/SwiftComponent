@@ -90,7 +90,7 @@ open class Label: UIView {
 
     open override func sizeThatFits(_ size: CGSize) -> CGSize {
         resetLayout(size)
-        
+
         if let textContainer {
             let rect = layoutManager.usedRect(for: textContainer)
             frame = rect
@@ -116,9 +116,16 @@ open class Label: UIView {
 
         resetLayout(rect.size)
 
-        if let textStorage {
+        if let textContainer, let textStorage {
             let range = NSRange(location: 0, length: textStorage.length)
-            layoutManager.drawGlyphs(forGlyphRange: range, at: .zero)
+            var point = CGPoint.zero
+
+            let usedRect = layoutManager.usedRect(for: textContainer)
+            if usedRect.height < rect.height { // position at centerY
+                point.y = (rect.height - usedRect.height) / 2
+            }
+
+            layoutManager.drawGlyphs(forGlyphRange: range, at: point)
         }
     }
 }
