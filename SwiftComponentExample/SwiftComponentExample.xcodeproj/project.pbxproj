@@ -15,6 +15,23 @@
 		C54A2B8C2B81E95D005E2159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54A2B8A2B81E95D005E2159 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C54A2B972B81E9B1005E2159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54A2B932B81E9B0005E2159 /* SwiftComponent.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C54A2B662B81E62E005E2159;
+			remoteInfo = SwiftComponent;
+		};
+		C54A2B992B81E9BF005E2159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C54A2B932B81E9B0005E2159 /* SwiftComponent.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C54A2B652B81E62E005E2159;
+			remoteInfo = SwiftComponent;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		C54A2B7C2B81E95C005E2159 /* SwiftComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A2B7F2B81E95C005E2159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +41,7 @@
 		C54A2B882B81E95D005E2159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C54A2B8B2B81E95D005E2159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C54A2B8D2B81E95D005E2159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C54A2B932B81E9B0005E2159 /* SwiftComponent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftComponent.xcodeproj; path = ../SwiftComponent/SwiftComponent.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,7 @@
 		C54A2B732B81E95C005E2159 = {
 			isa = PBXGroup;
 			children = (
+				C54A2B932B81E9B0005E2159 /* SwiftComponent.xcodeproj */,
 				C54A2B7E2B81E95C005E2159 /* SwiftComponentExample */,
 				C54A2B7D2B81E95C005E2159 /* Products */,
 			);
@@ -67,6 +86,14 @@
 			path = SwiftComponentExample;
 			sourceTree = "<group>";
 		};
+		C54A2B942B81E9B0005E2159 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C54A2B982B81E9B1005E2159 /* SwiftComponent.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,6 +108,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C54A2B9A2B81E9BF005E2159 /* PBXTargetDependency */,
 			);
 			name = SwiftComponentExample;
 			productName = SwiftComponentExample;
@@ -113,12 +141,28 @@
 			mainGroup = C54A2B732B81E95C005E2159;
 			productRefGroup = C54A2B7D2B81E95C005E2159 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C54A2B942B81E9B0005E2159 /* Products */;
+					ProjectRef = C54A2B932B81E9B0005E2159 /* SwiftComponent.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C54A2B7B2B81E95C005E2159 /* SwiftComponentExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C54A2B982B81E9B1005E2159 /* SwiftComponent.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftComponent.framework;
+			remoteRef = C54A2B972B81E9B1005E2159 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C54A2B7A2B81E95C005E2159 /* Resources */ = {
@@ -145,6 +189,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C54A2B9A2B81E9BF005E2159 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftComponent;
+			targetProxy = C54A2B992B81E9BF005E2159 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C54A2B852B81E95C005E2159 /* Main.storyboard */ = {
@@ -218,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

@@ -89,6 +89,8 @@ open class Label: UIView {
             let range = NSRange(location: 0, length: textStorage.length)
             layoutManager.drawGlyphs(forGlyphRange: range, at: .zero)
         }
+
+        print("\(#function)")
     }
 }
 
