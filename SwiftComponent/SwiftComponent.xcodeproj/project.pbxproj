@@ -10,6 +10,8 @@
 		C54A2B6A2B81E62E005E2159 /* SwiftComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C54A2B692B81E62E005E2159 /* SwiftComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C54A2B722B81E6E1005E2159 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B712B81E6E1005E2159 /* Label.swift */; };
 		C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */; };
+		C54A2BAA2B82056F005E2159 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA92B82056F005E2159 /* ListView.swift */; };
+		C54A2BAC2B820597005E2159 /* ListView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BAB2B820597005E2159 /* ListView+DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		C54A2B692B81E62E005E2159 /* SwiftComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftComponent.h; sourceTree = "<group>"; };
 		C54A2B712B81E6E1005E2159 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		C54A2BA92B82056F005E2159 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		C54A2BAB2B820597005E2159 /* ListView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListView+DataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		C54A2B702B81E67C005E2159 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C54A2BA82B820560005E2159 /* ListView */,
 				C54A2BA32B81FF49005E2159 /* Extensions */,
 				C54A2B712B81E6E1005E2159 /* Label.swift */,
 			);
@@ -70,6 +75,15 @@
 				C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C54A2BA82B820560005E2159 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				C54A2BA92B82056F005E2159 /* ListView.swift */,
+				C54A2BAB2B820597005E2159 /* ListView+DataSource.swift */,
+			);
+			path = ListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C54A2B722B81E6E1005E2159 /* Label.swift in Sources */,
+				C54A2BAC2B820597005E2159 /* ListView+DataSource.swift in Sources */,
 				C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */,
+				C54A2BAA2B82056F005E2159 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
