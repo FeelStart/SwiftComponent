@@ -80,6 +80,37 @@ open class Label: UIView {
         self.textStorage = textStorage
     }
 
+    open override func sizeToFit() {
+        resetLayout(CGSize(width: CGFloat.infinity, height: .infinity))
+
+        if let textContainer {
+            frame = layoutManager.usedRect(for: textContainer)
+        }
+    }
+
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        resetLayout(size)
+        
+        if let textContainer {
+            let rect = layoutManager.usedRect(for: textContainer)
+            frame = rect
+
+            return rect.size
+        }
+
+        return .zero
+    }
+
+    open override var intrinsicContentSize: CGSize {
+        resetLayout(CGSize(width: CGFloat.infinity, height: .infinity))
+
+        if let textContainer {
+            return layoutManager.usedRect(for: textContainer).size
+        }
+
+        return .zero
+    }
+
     open override func draw(_ rect: CGRect) {
         super.draw(rect)
 
@@ -89,8 +120,6 @@ open class Label: UIView {
             let range = NSRange(location: 0, length: textStorage.length)
             layoutManager.drawGlyphs(forGlyphRange: range, at: .zero)
         }
-
-        print("\(#function)")
     }
 }
 

@@ -20,6 +20,7 @@ class UserProfileViewController: UIViewController {
         navigationItem.title = "Me"
         view.backgroundColor = .white
 
+        tabelView.delegate = self
         tabelView.dataSource = dataSource
         tabelView.translatesAutoresizingMaskIntoConstraints = false
         tabelView.separatorStyle = .none
@@ -47,13 +48,20 @@ class UserProfileViewController: UIViewController {
     }
 
     private func loadData() {
-        let item = Item(title: "1")
+        let item = Item(title: "About")
 
         var snapshot = NSDiffableDataSourceSnapshot<String, Item>()
         snapshot.appendSections(["Root"])
         snapshot.appendItems([item], toSection: "Root")
 
         dataSource.apply(snapshot)
+    }
+}
+
+extension UserProfileViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -78,8 +86,6 @@ extension UserProfileViewController {
             NSLayoutConstraint.activate([
                 titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
                 titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-                titleLabel.widthAnchor.constraint(equalToConstant: 100),
-                titleLabel.heightAnchor.constraint(equalToConstant: 40)
             ])
         }
         
