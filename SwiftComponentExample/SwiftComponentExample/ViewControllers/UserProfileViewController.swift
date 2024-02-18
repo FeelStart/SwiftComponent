@@ -40,6 +40,7 @@ class UserProfileViewController: UIViewController {
         return DataSource(tableView: tabelView) { tableView, indexPath, itemIdentifier in
             let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(Cell.self), for: indexPath)
             if let cell = cell as? Cell {
+                cell.contentView.backgroundColor = .random
                 cell.titleLabel.text = itemIdentifier.title
             }
 
@@ -48,17 +49,22 @@ class UserProfileViewController: UIViewController {
     }
 
     private func loadData() {
-        let item = Item(title: "About")
+        let aboutItem = Item(title: "About")
+        let cacheItem = Item(title: "Cache")
 
         var snapshot = NSDiffableDataSourceSnapshot<String, Item>()
         snapshot.appendSections(["Root"])
-        snapshot.appendItems([item], toSection: "Root")
+        snapshot.appendItems([aboutItem, cacheItem], toSection: "Root")
 
         dataSource.apply(snapshot)
     }
 }
 
 extension UserProfileViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

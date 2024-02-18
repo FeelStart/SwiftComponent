@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		C54A2B6A2B81E62E005E2159 /* SwiftComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C54A2B692B81E62E005E2159 /* SwiftComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C54A2B722B81E6E1005E2159 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B712B81E6E1005E2159 /* Label.swift */; };
+		C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C54A2B662B81E62E005E2159 /* SwiftComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A2B692B81E62E005E2159 /* SwiftComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftComponent.h; sourceTree = "<group>"; };
 		C54A2B712B81E6E1005E2159 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,18 @@
 		C54A2B702B81E67C005E2159 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C54A2BA32B81FF49005E2159 /* Extensions */,
 				C54A2B712B81E6E1005E2159 /* Label.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		C54A2BA32B81FF49005E2159 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C54A2B722B81E6E1005E2159 /* Label.swift in Sources */,
+				C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
