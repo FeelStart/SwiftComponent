@@ -28,5 +28,6 @@ public final class TextNode: BaseTextNode {
 }
 
 public final class ImageNode: BaseTextNode {
-
 }
+
+
