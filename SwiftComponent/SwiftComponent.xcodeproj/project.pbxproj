@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507F74D2B82EF6D00225D3A /* TextNode.swift */; };
 		C54A2B6A2B81E62E005E2159 /* SwiftComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C54A2B692B81E62E005E2159 /* SwiftComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C54A2B722B81E6E1005E2159 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B712B81E6E1005E2159 /* Label.swift */; };
 		C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C507F74D2B82EF6D00225D3A /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		C54A2B662B81E62E005E2159 /* SwiftComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A2B692B81E62E005E2159 /* SwiftComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftComponent.h; sourceTree = "<group>"; };
 		C54A2B712B81E6E1005E2159 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C507F74C2B82EF5F00225D3A /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				C507F74D2B82EF6D00225D3A /* TextNode.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		C54A2B5C2B81E62E005E2159 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		C54A2B702B81E67C005E2159 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C507F74C2B82EF5F00225D3A /* Text */,
 				C54A2BA82B820560005E2159 /* ListView */,
 				C54A2BA32B81FF49005E2159 /* Extensions */,
 				C54A2B712B81E6E1005E2159 /* Label.swift */,
@@ -169,6 +180,7 @@
 				C54A2B722B81E6E1005E2159 /* Label.swift in Sources */,
 				C54A2BAC2B820597005E2159 /* ListView+DataSource.swift in Sources */,
 				C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */,
+				C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */,
 				C54A2BAA2B82056F005E2159 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
