@@ -48,9 +48,16 @@ open class TextView: UIView {
 
         textContentStorage.addTextLayoutManager(textLayoutManager!)
 
-        let textContainer = NSTextContainer(size: CGSize(width: 1000, height: 1000))
+        let textContainer = NSTextContainer(size: bounds.size)
         textLayoutManager.textContainer = textContainer
         textLayoutManager.textViewportLayoutController.delegate = self
+    }
+
+    open override var bounds: CGRect {
+        didSet {
+            textLayoutManager.textContainer?.size = bounds.size
+            textLayoutManager.textViewportLayoutController.layoutViewport()
+        }
     }
 
     open override func draw(_ rect: CGRect) {

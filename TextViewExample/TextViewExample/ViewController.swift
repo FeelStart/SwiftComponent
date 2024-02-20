@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     private func initTextView() {
         let textView = TextView()
-        textView.text = "Hi!666666666666\nend"
+        textView.text = "Hi!66666666666666666666666.\nend"
         textView.backgroundColor = .red
         view.addSubview(textView)
         NSLayoutConstraint.activate([
