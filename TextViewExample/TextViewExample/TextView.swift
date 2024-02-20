@@ -60,6 +60,24 @@ open class TextView: UIView {
         }
     }
 
+    open override func sizeToFit() {
+        textLayoutManager.textContainer?.size = .zero
+        textLayoutManager.textViewportLayoutController.layoutViewport()
+        frame = textLayoutManager.usageBoundsForTextContainer
+    }
+
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
+        textLayoutManager.textContainer?.size = bounds.size
+        textLayoutManager.textViewportLayoutController.layoutViewport()
+        return textLayoutManager.usageBoundsForTextContainer.size
+    }
+
+    open override var intrinsicContentSize: CGSize {
+        textLayoutManager.textContainer?.size = .zero
+        textLayoutManager.textViewportLayoutController.layoutViewport()
+        return textLayoutManager.usageBoundsForTextContainer.size
+    }
+
     open override func draw(_ rect: CGRect) {
         super.draw(rect)
 
