@@ -9,7 +9,7 @@ import UIKit
 import os
 
 /// TextKit2 实现的文本视图
-open class TextView: UIView {
+open class TextView: UIScrollView {
 
     var textContentStorage: NSTextContentStorage!
     var textLayoutManager: NSTextLayoutManager!
