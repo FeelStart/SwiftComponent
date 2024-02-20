@@ -11,8 +11,8 @@ import os
 /// TextKit2 实现的文本视图
 open class TextView: UIScrollView {
 
-    var textContentStorage: NSTextContentStorage!
-    var textLayoutManager: NSTextLayoutManager!
+    private var textContentStorage: NSTextContentStorage!
+    private var textLayoutManager: NSTextLayoutManager!
     private var textLayoutFragments = [NSTextLayoutFragment]()
 
     open var text: String? {
