@@ -46,9 +46,13 @@ open class TextView: UIView {
         textLayoutManager = NSTextLayoutManager()
         textContentStorage = NSTextContentStorage()
 
-        textContentStorage.addTextLayoutManager(textLayoutManager!)
+        textContentStorage.delegate = self 
+        textContentStorage.addTextLayoutManager(textLayoutManager)
 
         let textContainer = NSTextContainer(size: bounds.size)
+        textContainer.maximumNumberOfLines = 0
+
+        textLayoutManager.delegate = self
         textLayoutManager.textContainer = textContainer
         textLayoutManager.textViewportLayoutController.delegate = self
     }
@@ -96,7 +100,7 @@ open class TextView: UIView {
 extension TextView: NSTextViewportLayoutControllerDelegate {
 
     public func viewportBounds(for textViewportLayoutController: NSTextViewportLayoutController) -> CGRect {
-        return .zero
+        return bounds
     }
 
     public func textViewportLayoutController(_ textViewportLayoutController: NSTextViewportLayoutController, configureRenderingSurfaceFor textLayoutFragment: NSTextLayoutFragment) {
@@ -116,3 +120,42 @@ extension TextView: NSTextViewportLayoutControllerDelegate {
     }
 }
 
+// MARK: - NSTextLayoutManagerDelegate
+
+extension TextView: NSTextLayoutManagerDelegate {
+
+    public func textLayoutManager(_ textLayoutManager: NSTextLayoutManager, textLayoutFragmentFor location: NSTextLocation, in textElement: NSTextElement) -> NSTextLayoutFragment {
+        os_log(.info, "\(#function)")
+        return NSTextLayoutFragment(textElement: textElement, range: textElement.elementRange)
+    }
+
+    public func textLayoutManager(_ textLayoutManager: NSTextLayoutManager, shouldBreakLineBefore location: NSTextLocation, hyphenating: Bool) -> Bool {
+        os_log(.info, "\(#function)")
+        return false
+    }
+
+    public func textLayoutManager(_ textLayoutManager: NSTextLayoutManager, renderingAttributesForLink link: Any, at location: NSTextLocation, defaultAttributes renderingAttributes: [NSAttributedString.Key : Any] = [:]) -> [NSAttributedString.Key : Any]? {
+        os_log(.info, "\(#function)")
+        return nil
+    }
+}
+
+// MARK: - NSTextContentStorageDelegate
+
+extension TextView: NSTextContentStorageDelegate {
+
+    public func textContentStorage(_ textContentStorage: NSTextContentStorage, textParagraphWith range: NSRange) -> NSTextParagraph? {
+        os_log(.info, "\(#function)")
+        return nil
+    }
+
+    public func textContentManager(_ textContentManager: NSTextContentManager, textElementAt location: NSTextLocation) -> NSTextElement? {
+        os_log(.info, "\(#function)")
+        return nil
+    }
+
+    public func textContentManager(_ textContentManager: NSTextContentManager, shouldEnumerate textElement: NSTextElement, options: NSTextContentManager.EnumerationOptions = []) -> Bool {
+        os_log(.info, "\(#function)")
+        return true
+    }
+}
