@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     private func initTextView() {
-        let textView = TextView()
+        let textView = LabelView()
         textView.text = "Hi!\nHa\nend"
         textView.backgroundColor = .red
         view.addSubview(textView)

@@ -9,7 +9,7 @@ import UIKit
 import os
 
 /// TextKit2 实现的文本视图
-open class TextView: UIScrollView {
+open class LabelView: UIView {
 
     private var textContentStorage: NSTextContentStorage!
     private var textLayoutManager: NSTextLayoutManager!
@@ -97,7 +97,7 @@ open class TextView: UIScrollView {
 
 // MARK: - NSTextViewportLayoutControllerDelegate
 
-extension TextView: NSTextViewportLayoutControllerDelegate {
+extension LabelView: NSTextViewportLayoutControllerDelegate {
 
     public func viewportBounds(for textViewportLayoutController: NSTextViewportLayoutController) -> CGRect {
         return bounds
@@ -122,7 +122,7 @@ extension TextView: NSTextViewportLayoutControllerDelegate {
 
 // MARK: - NSTextLayoutManagerDelegate
 
-extension TextView: NSTextLayoutManagerDelegate {
+extension LabelView: NSTextLayoutManagerDelegate {
 
     public func textLayoutManager(_ textLayoutManager: NSTextLayoutManager, textLayoutFragmentFor location: NSTextLocation, in textElement: NSTextElement) -> NSTextLayoutFragment {
         os_log(.info, "\(#function)")
@@ -142,7 +142,7 @@ extension TextView: NSTextLayoutManagerDelegate {
 
 // MARK: - NSTextContentStorageDelegate
 
-extension TextView: NSTextContentStorageDelegate {
+extension LabelView: NSTextContentStorageDelegate {
 
     public func textContentStorage(_ textContentStorage: NSTextContentStorage, textParagraphWith range: NSRange) -> NSTextParagraph? {
         os_log(.info, "\(#function)")
@@ -159,3 +159,4 @@ extension TextView: NSTextContentStorageDelegate {
         return true
     }
 }
+

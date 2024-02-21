@@ -13,7 +13,7 @@
 		C515B0682B8439C100259E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C515B0662B8439C100259E7A /* Main.storyboard */; };
 		C515B06A2B8439C200259E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C515B0692B8439C200259E7A /* Assets.xcassets */; };
 		C515B06D2B8439C200259E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C515B06B2B8439C200259E7A /* LaunchScreen.storyboard */; };
-		C515B0752B8439D000259E7A /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C515B0742B8439D000259E7A /* TextView.swift */; };
+		C515B0752B8439D000259E7A /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C515B0742B8439D000259E7A /* LabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		C515B0692B8439C200259E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C515B06C2B8439C200259E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C515B06E2B8439C200259E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C515B0742B8439D000259E7A /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		C515B0742B8439D000259E7A /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				C515B0602B8439C100259E7A /* AppDelegate.swift */,
 				C515B0622B8439C100259E7A /* SceneDelegate.swift */,
 				C515B0642B8439C100259E7A /* ViewController.swift */,
-				C515B0742B8439D000259E7A /* TextView.swift */,
+				C515B0742B8439D000259E7A /* LabelView.swift */,
 				C515B0662B8439C100259E7A /* Main.storyboard */,
 				C515B0692B8439C200259E7A /* Assets.xcassets */,
 				C515B06B2B8439C200259E7A /* LaunchScreen.storyboard */,
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C515B0652B8439C100259E7A /* ViewController.swift in Sources */,
-				C515B0752B8439D000259E7A /* TextView.swift in Sources */,
+				C515B0752B8439D000259E7A /* LabelView.swift in Sources */,
 				C515B0612B8439C100259E7A /* AppDelegate.swift in Sources */,
 				C515B0632B8439C100259E7A /* SceneDelegate.swift in Sources */,
 			);
