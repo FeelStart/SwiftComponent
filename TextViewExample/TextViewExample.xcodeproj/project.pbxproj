@@ -13,8 +13,24 @@
 		C515B0682B8439C100259E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C515B0662B8439C100259E7A /* Main.storyboard */; };
 		C515B06A2B8439C200259E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C515B0692B8439C200259E7A /* Assets.xcassets */; };
 		C515B06D2B8439C200259E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C515B06B2B8439C200259E7A /* LaunchScreen.storyboard */; };
-		C515B0752B8439D000259E7A /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C515B0742B8439D000259E7A /* LabelView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5A78F452B85CBEB003ED099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5A78F412B85CBEB003ED099 /* SwiftComponent.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C54A2B662B81E62E005E2159;
+			remoteInfo = SwiftComponent;
+		};
+		C5A78F472B85CC06003ED099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5A78F412B85CBEB003ED099 /* SwiftComponent.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C54A2B652B81E62E005E2159;
+			remoteInfo = SwiftComponent;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C515B05D2B8439C100259E7A /* TextViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,7 +41,7 @@
 		C515B0692B8439C200259E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C515B06C2B8439C200259E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C515B06E2B8439C200259E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C515B0742B8439D000259E7A /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		C5A78F412B85CBEB003ED099 /* SwiftComponent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftComponent.xcodeproj; path = ../SwiftComponent/SwiftComponent.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,7 @@
 		C515B0542B8439C100259E7A = {
 			isa = PBXGroup;
 			children = (
+				C5A78F412B85CBEB003ED099 /* SwiftComponent.xcodeproj */,
 				C515B05F2B8439C100259E7A /* TextViewExample */,
 				C515B05E2B8439C100259E7A /* Products */,
 			);
@@ -61,13 +78,20 @@
 				C515B0602B8439C100259E7A /* AppDelegate.swift */,
 				C515B0622B8439C100259E7A /* SceneDelegate.swift */,
 				C515B0642B8439C100259E7A /* ViewController.swift */,
-				C515B0742B8439D000259E7A /* LabelView.swift */,
 				C515B0662B8439C100259E7A /* Main.storyboard */,
 				C515B0692B8439C200259E7A /* Assets.xcassets */,
 				C515B06B2B8439C200259E7A /* LaunchScreen.storyboard */,
 				C515B06E2B8439C200259E7A /* Info.plist */,
 			);
 			path = TextViewExample;
+			sourceTree = "<group>";
+		};
+		C5A78F422B85CBEB003ED099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5A78F462B85CBEB003ED099 /* SwiftComponent.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +108,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C5A78F482B85CC06003ED099 /* PBXTargetDependency */,
 			);
 			name = TextViewExample;
 			productName = TextViewExample;
@@ -116,12 +141,28 @@
 			mainGroup = C515B0542B8439C100259E7A;
 			productRefGroup = C515B05E2B8439C100259E7A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C5A78F422B85CBEB003ED099 /* Products */;
+					ProjectRef = C5A78F412B85CBEB003ED099 /* SwiftComponent.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C515B05C2B8439C100259E7A /* TextViewExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C5A78F462B85CBEB003ED099 /* SwiftComponent.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftComponent.framework;
+			remoteRef = C5A78F452B85CBEB003ED099 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C515B05B2B8439C100259E7A /* Resources */ = {
@@ -142,13 +183,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C515B0652B8439C100259E7A /* ViewController.swift in Sources */,
-				C515B0752B8439D000259E7A /* LabelView.swift in Sources */,
 				C515B0612B8439C100259E7A /* AppDelegate.swift in Sources */,
 				C515B0632B8439C100259E7A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5A78F482B85CC06003ED099 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftComponent;
+			targetProxy = C5A78F472B85CC06003ED099 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C515B0662B8439C100259E7A /* Main.storyboard */ = {

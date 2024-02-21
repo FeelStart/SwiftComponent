@@ -9,6 +9,7 @@ import UIKit
 import os
 
 /// TextKit2 实现的文本视图
+@available(iOS 15.0, *)
 open class LabelView: UIView {
 
     private var textContentStorage: NSTextContentStorage!
@@ -97,6 +98,7 @@ open class LabelView: UIView {
 
 // MARK: - NSTextViewportLayoutControllerDelegate
 
+@available(iOS 15.0, *)
 extension LabelView: NSTextViewportLayoutControllerDelegate {
 
     public func viewportBounds(for textViewportLayoutController: NSTextViewportLayoutController) -> CGRect {
@@ -122,6 +124,7 @@ extension LabelView: NSTextViewportLayoutControllerDelegate {
 
 // MARK: - NSTextLayoutManagerDelegate
 
+@available(iOS 15.0, *)
 extension LabelView: NSTextLayoutManagerDelegate {
 
     public func textLayoutManager(_ textLayoutManager: NSTextLayoutManager, textLayoutFragmentFor location: NSTextLocation, in textElement: NSTextElement) -> NSTextLayoutFragment {
@@ -142,6 +145,7 @@ extension LabelView: NSTextLayoutManagerDelegate {
 
 // MARK: - NSTextContentStorageDelegate
 
+@available(iOS 15.0, *)
 extension LabelView: NSTextContentStorageDelegate {
 
     public func textContentStorage(_ textContentStorage: NSTextContentStorage, textParagraphWith range: NSRange) -> NSTextParagraph? {
