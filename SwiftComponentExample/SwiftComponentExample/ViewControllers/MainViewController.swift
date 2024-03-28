@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftComponent
 
 class MainViewController: UITabBarController {
 
@@ -20,4 +21,19 @@ class MainViewController: UITabBarController {
         meItem?.title = "Me"
         meItem?.image = UIImage(systemName: "house.circle.fill")
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MainViewController.LifecycleNotification.viewWillAppear.post(parameter: animated)
+    }
 }
+
+extension MainViewController {
+    enum LifecycleNotification: String, ZNotification.Notifiable {
+        typealias ParameterType = Bool
+
+        case viewWillAppear
+    }
+}
+
+

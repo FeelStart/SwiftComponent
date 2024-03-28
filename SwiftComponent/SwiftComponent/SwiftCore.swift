@@ -20,13 +20,41 @@ extension SwiftCore {
 
 /// swift/include/swift/ABI/Metadata.h
 extension SwiftCore {
+    public class TargetMetadata<Runtime> {
+        var kind: MetadataKind = .unknown
+    }
+
     public typealias HeapMetadata = TargetHeapMetadata<InProcess>
 
     public class TargetHeapMetadata<Runtime>: TargetMetadata<Runtime> {
     }
 
-    public class TargetMetadata<Runtime> {
-        var kind: MetadataKind = .unknown
+    public typealias ValueMetadata = TargetValueMetadata<InProcess>
+
+    /// commom for struct or enum
+    public class TargetValueMetadata<Runtime>: TargetMetadata<Runtime> {
+        var description: TargetValueTypeDescriptor<Runtime>?
+    }
+
+    // MARK: -
+
+    public class TargetContextDescriptor<Runtime> {
+        var flags: UInt32 = 0
+        var parent: Any?
+        /// name of type
+        var name: String = ""
+    }
+
+    public class TargetTypeContextDescriptor<Runtime>: TargetContextDescriptor<Runtime> {
+    }
+
+    public class TargetValueTypeDescriptor<Runtime>: TargetTypeContextDescriptor<Runtime> {
+    }
+
+    public class TargetStructDescriptor<Runtime>: TargetValueTypeDescriptor<Runtime> {
+        /// 属性数目
+        var numFields: UInt32 = 0
+        var fieldOffsetVectorOffset: UInt32 = 0
     }
 }
 

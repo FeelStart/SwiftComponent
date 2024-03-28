@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507F74D2B82EF6D00225D3A /* TextNode.swift */; };
 		C507F7502B82F15100225D3A /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507F74F2B82F15100225D3A /* TextEditor.swift */; };
+		C51D7C892BABC78000709C71 /* SimpleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C882BABC78000709C71 /* SimpleLabel.swift */; };
+		C51D7C992BAD047600709C71 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C982BAD047600709C71 /* AudioPlayer.swift */; };
 		C52F7C6B2BA91A0500374C7F /* SwiftCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F7C6A2BA91A0500374C7F /* SwiftCore.swift */; };
+		C54206C62BB404DE0007F019 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54206C52BB404DE0007F019 /* Notification.swift */; };
 		C54A2B6A2B81E62E005E2159 /* SwiftComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C54A2B692B81E62E005E2159 /* SwiftComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C54A2B722B81E6E1005E2159 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B712B81E6E1005E2159 /* Label.swift */; };
 		C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */; };
@@ -22,7 +25,10 @@
 /* Begin PBXFileReference section */
 		C507F74D2B82EF6D00225D3A /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		C507F74F2B82F15100225D3A /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
+		C51D7C882BABC78000709C71 /* SimpleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLabel.swift; sourceTree = "<group>"; };
+		C51D7C982BAD047600709C71 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		C52F7C6A2BA91A0500374C7F /* SwiftCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCore.swift; sourceTree = "<group>"; };
+		C54206C52BB404DE0007F019 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		C54A2B662B81E62E005E2159 /* SwiftComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A2B692B81E62E005E2159 /* SwiftComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftComponent.h; sourceTree = "<group>"; };
 		C54A2B712B81E6E1005E2159 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -53,6 +59,22 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		C51D7C932BAD03CC00709C71 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				C51D7C982BAD047600709C71 /* AudioPlayer.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		C54206C42BB404CB0007F019 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				C54206C52BB404DE0007F019 /* Notification.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		C54A2B5C2B81E62E005E2159 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +94,8 @@
 		C54A2B682B81E62E005E2159 /* SwiftComponent */ = {
 			isa = PBXGroup;
 			children = (
+				C54206C42BB404CB0007F019 /* Foundation */,
+				C51D7C932BAD03CC00709C71 /* Audio */,
 				C54A2B702B81E67C005E2159 /* UI */,
 				C54A2B692B81E62E005E2159 /* SwiftComponent.h */,
 				C52F7C6A2BA91A0500374C7F /* SwiftCore.swift */,
@@ -88,6 +112,7 @@
 				C54A2B712B81E6E1005E2159 /* Label.swift */,
 				C5A78F3F2B85CB9B003ED099 /* LabelView.swift */,
 				C5C4B4C42B97FF0900EDEA52 /* MetalView.swift */,
+				C51D7C882BABC78000709C71 /* SimpleLabel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -189,12 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51D7C892BABC78000709C71 /* SimpleLabel.swift in Sources */,
 				C5C4B4C52B97FF0900EDEA52 /* MetalView.swift in Sources */,
+				C51D7C992BAD047600709C71 /* AudioPlayer.swift in Sources */,
 				C54A2B722B81E6E1005E2159 /* Label.swift in Sources */,
 				C507F7502B82F15100225D3A /* TextEditor.swift in Sources */,
 				C54A2BAC2B820597005E2159 /* ListView+DataSource.swift in Sources */,
 				C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */,
 				C5A78F402B85CB9B003ED099 /* LabelView.swift in Sources */,
+				C54206C62BB404DE0007F019 /* Notification.swift in Sources */,
 				C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */,
 				C54A2BAA2B82056F005E2159 /* ListView.swift in Sources */,
 				C52F7C6B2BA91A0500374C7F /* SwiftCore.swift in Sources */,

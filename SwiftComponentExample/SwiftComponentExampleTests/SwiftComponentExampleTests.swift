@@ -19,12 +19,6 @@ final class SwiftComponentExampleTests: XCTestCase {
     }
 
     func testExample() throws {
-        struct Man {
-            let age: Int
-        }
-
-        let m = Man(age: 20)
-        print(#function)
     }
 
     func testPerformanceExample() throws {
@@ -35,3 +29,5 @@ final class SwiftComponentExampleTests: XCTestCase {
     }
 
 }
+
+

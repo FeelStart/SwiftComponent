@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51D7C632BA93D5B00709C71 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C622BA93D5B00709C71 /* UnitTest.swift */; };
 		C52F7C752BA9277700374C7F /* SwiftComponentExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F7C742BA9277700374C7F /* SwiftComponentExampleTests.swift */; };
 		C54A2B802B81E95C005E2159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B7F2B81E95C005E2159 /* AppDelegate.swift */; };
 		C54A2B822B81E95C005E2159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B812B81E95C005E2159 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C51D7C622BA93D5B00709C71 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		C52F7C722BA9277700374C7F /* SwiftComponentExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftComponentExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52F7C742BA9277700374C7F /* SwiftComponentExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftComponentExampleTests.swift; sourceTree = "<group>"; };
 		C54A2B7C2B81E95C005E2159 /* SwiftComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 				C54A2BA02B81ECDF005E2159 /* ViewControllers */,
 				C54A2B7F2B81E95C005E2159 /* AppDelegate.swift */,
 				C54A2B812B81E95C005E2159 /* SceneDelegate.swift */,
+				C51D7C622BA93D5B00709C71 /* UnitTest.swift */,
 				C54A2B852B81E95C005E2159 /* Main.storyboard */,
 				C54A2B882B81E95D005E2159 /* Assets.xcassets */,
 				C54A2B8A2B81E95D005E2159 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				C54A2B802B81E95C005E2159 /* AppDelegate.swift in Sources */,
 				C54A2B822B81E95C005E2159 /* SceneDelegate.swift in Sources */,
 				C54A2B9E2B81EC95005E2159 /* MainViewController.swift in Sources */,
+				C51D7C632BA93D5B00709C71 /* UnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

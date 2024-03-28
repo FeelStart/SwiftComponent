@@ -12,6 +12,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UnitTest.test()
+
+        MainViewController.LifecycleNotification.viewWillAppear.addListener { parameter in
+            print(parameter)
+        }
+
         return true
     }
 

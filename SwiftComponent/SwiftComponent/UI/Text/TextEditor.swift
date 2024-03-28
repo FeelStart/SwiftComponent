@@ -7,5 +7,5 @@
 
 import Foundation
 
-public final class TextEditor: NSObject {
+open class TextEditor: NSObject {
 }
