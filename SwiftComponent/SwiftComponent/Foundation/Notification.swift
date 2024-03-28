@@ -10,6 +10,7 @@ import OSLog
 
 ///
 /// https://medium.com/@leandromperez/strong-typed-notifications-in-swift-a5de8f7f58e0
+/// https://alexj.org/07/swift-typed-notifications/
 
 public enum ZNotification {
 }
