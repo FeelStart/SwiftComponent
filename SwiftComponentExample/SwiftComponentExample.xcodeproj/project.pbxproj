@@ -16,6 +16,7 @@
 		C54A2B8C2B81E95D005E2159 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54A2B8A2B81E95D005E2159 /* LaunchScreen.storyboard */; };
 		C54A2B9E2B81EC95005E2159 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B9D2B81EC95005E2159 /* MainViewController.swift */; };
 		C54A2BA22B81ED0D005E2159 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA12B81ED0D005E2159 /* UserProfileViewController.swift */; };
+		C59D8E5B2BCD21070023A60E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59D8E5A2BCD21070023A60E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C54A2B932B81E9B0005E2159 /* SwiftComponent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftComponent.xcodeproj; path = ../SwiftComponent/SwiftComponent.xcodeproj; sourceTree = "<group>"; };
 		C54A2B9D2B81EC95005E2159 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C54A2BA12B81ED0D005E2159 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		C59D8E5A2BCD21070023A60E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				C54A2B9D2B81EC95005E2159 /* MainViewController.swift */,
 				C54A2BA12B81ED0D005E2159 /* UserProfileViewController.swift */,
+				C59D8E5A2BCD21070023A60E /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				C54A2BA22B81ED0D005E2159 /* UserProfileViewController.swift in Sources */,
 				C54A2B802B81E95C005E2159 /* AppDelegate.swift in Sources */,
 				C54A2B822B81E95C005E2159 /* SceneDelegate.swift in Sources */,
+				C59D8E5B2BCD21070023A60E /* DetailViewController.swift in Sources */,
 				C54A2B9E2B81EC95005E2159 /* MainViewController.swift in Sources */,
 				C51D7C632BA93D5B00709C71 /* UnitTest.swift in Sources */,
 			);

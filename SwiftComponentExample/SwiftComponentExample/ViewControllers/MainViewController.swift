@@ -14,12 +14,17 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
 
         viewControllers = [
-            UINavigationController(rootViewController: UserProfileViewController())
+            UINavigationController(rootViewController: UserProfileViewController()),
+            UINavigationController(rootViewController: DetailViewController())
         ]
 
         let meItem: UITabBarItem? = tabBar.items?[0]
         meItem?.title = "Me"
         meItem?.image = UIImage(systemName: "house.circle.fill")
+
+        let detailItem: UITabBarItem? = tabBar.items?[1]
+        detailItem?.title = "Detail"
+        detailItem?.image = UIImage(systemName: "doc.richtext.zh")
     }
 
     override func viewWillAppear(_ animated: Bool) {
