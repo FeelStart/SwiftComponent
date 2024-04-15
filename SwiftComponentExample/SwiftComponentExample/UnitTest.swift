@@ -33,7 +33,18 @@ extension UnitTest {
             print(pointer)
         }
 
+        testCharacter()
+
         print(#function)
+    }
+
+    static func testCharacter() {
+        // Extended grapheme cluster
+        // 扩展字素簇是一个或多个 Unicode 标量的序列，它们（组合时）产生单个人类可读字符。
+        // https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters
+        let c0: Character = "\u{E9}"
+        let c1: Character = "\u{65}\u{301}"
+        print("\(c0):\(c1):\(c0 == c1)")
     }
 }
 
