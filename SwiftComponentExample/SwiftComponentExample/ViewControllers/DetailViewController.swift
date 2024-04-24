@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftComponent
 
 class DetailViewController: UIViewController {
 
@@ -48,7 +49,6 @@ class DetailViewController: UIViewController {
                                                     .paragraphStyle: paragraphStyle,
                                                     .backgroundColor: UIColor.green,
                                                     .foregroundColor: UIColor.black]))
-
 
         textView.attributedText = attributedString
     }

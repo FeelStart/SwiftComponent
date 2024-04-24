@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftComponent
 
 enum UnitTest {
 }
@@ -16,12 +17,21 @@ extension UnitTest {
             let age: Int
         }
 
-        class Women {
+        struct Women {
             let age: Int
             init(age: Int) {
                 self.age = age
             }
         }
+
+        enum AppleColorStyle {
+            case red
+        }
+
+//        let p = unsafeBitCast(Man.self as Any.Type, to: UnsafeMutablePointer<CoreStructMetadata>.self)
+//        let p0 = p.pointee
+        //let p1 = p0.kind.rawValue
+       // print("kind: \(p0.kind)")
 
         let m = Man(age: 3)
         withUnsafePointer(to: m) { pointer in
@@ -45,6 +55,19 @@ extension UnitTest {
         let c0: Character = "\u{E9}"
         let c1: Character = "\u{65}\u{301}"
         print("\(c0):\(c1):\(c0 == c1)")
+    }
+}
+
+extension UnitTest {
+    @globalActor
+    public struct SomeGlobalActor {
+      public actor MyActor { }
+
+      public static let shared = MyActor()
+    }
+
+    @SomeGlobalActor
+    func myActor() {
     }
 }
 

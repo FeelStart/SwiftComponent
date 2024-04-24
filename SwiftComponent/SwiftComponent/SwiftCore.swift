@@ -10,34 +10,54 @@ import Foundation
 public enum SwiftCore {
 }
 
+// MARK: - HeadObject
 /// swift/public/swiftshims/swift/shims/HeapObject.h
 extension SwiftCore {
     public struct HeadObject {
-        let metadata: HeapMetadata
-        let refCounts: Int
+        public let metadata: HeapMetadata
+        public let refCounts: UInt
     }
 }
 
+// MARK: - Metadata
 /// swift/include/swift/ABI/Metadata.h
 extension SwiftCore {
-    public class TargetMetadata<Runtime> {
-        var kind: MetadataKind = .unknown
+    public struct TargetMetadata<Runtime> {
+        public var kind: MetadataKind = .unknown
     }
+}
 
+// MARK: - HeadMetadata
+extension SwiftCore {
     public typealias HeapMetadata = TargetHeapMetadata<InProcess>
 
-    public class TargetHeapMetadata<Runtime>: TargetMetadata<Runtime> {
+    public struct TargetHeapMetadata<Runtime> {
+        public let `super`: TargetMetadata<Runtime>
     }
+}
 
+// MARK: - ValueMetadata
+extension SwiftCore {
     public typealias ValueMetadata = TargetValueMetadata<InProcess>
 
     /// commom for struct or enum
-    public class TargetValueMetadata<Runtime>: TargetMetadata<Runtime> {
-        var description: TargetValueTypeDescriptor<Runtime>?
+    public struct TargetValueMetadata<Runtime> {
+        public let `super`: TargetMetadata<Runtime>
+        public var description: TargetValueTypeDescriptor<Runtime>?
     }
+}
 
-    // MARK: -
+// MARK: - StructMetadata
+extension SwiftCore {
+    public typealias StructMetadata = TargetStructMetadata<InProcess>
 
+    public struct TargetStructMetadata<Runtime> {
+        let `super`: TargetValueMetadata<Runtime>
+    }
+}
+
+// MARK: - Descriptor
+extension SwiftCore {
     public class TargetContextDescriptor<Runtime> {
         var flags: UInt32 = 0
         var parent: Any?
