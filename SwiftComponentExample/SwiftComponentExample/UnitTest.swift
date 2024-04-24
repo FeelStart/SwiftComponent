@@ -28,10 +28,9 @@ extension UnitTest {
             case red
         }
 
-//        let p = unsafeBitCast(Man.self as Any.Type, to: UnsafeMutablePointer<CoreStructMetadata>.self)
-//        let p0 = p.pointee
-        //let p1 = p0.kind.rawValue
-       // print("kind: \(p0.kind)")
+        let p = unsafeBitCast(AppleColorStyle.self as Any.Type, to: UnsafeMutablePointer<CoreStructMetadata>.self)
+        let p0 = p.pointee
+        print("kind: \(p0.coreMetadataKind())")
 
         let m = Man(age: 3)
         withUnsafePointer(to: m) { pointer in
