@@ -42,8 +42,16 @@ public struct CoreStructMetadata {
 }
 
 public struct CoreTargetStructDescriptor {
+    let Flags: CoreContextDescriptorFlags
+    let parent: CoreTargetRelativeContextPointer
     let NumFields: UInt32
     let FieldOffsetVectorOffset: UInt32
+}
+
+public struct CoreContextDescriptorFlags {
+}
+
+public struct CoreTargetRelativeContextPointer {
 }
 
 /*
