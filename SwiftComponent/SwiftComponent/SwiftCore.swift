@@ -7,6 +7,11 @@
 
 import Foundation
 
+/*
+ https://www.jianshu.com/p/1bbd1ad29876
+ https://gist.github.com/pofat/d3c77ca88c5b2a3019febcb073c3d879
+ */
+
 /// swift/include/swift/ABI/MetadataValues.h
 /// swift/include/swift/ABI/MetadataKind.def
 public enum CoreMetadataKind: UInt {
@@ -33,17 +38,19 @@ public enum CoreMetadataKind: UInt {
 }
 
 public struct CoreStructMetadata {
-    public let kind: UInt
+    public let kind: CoreMetadataKind
     public let descriptor: UnsafePointer<CoreTargetStructDescriptor>
 
-    public func coreMetadataKind() -> CoreMetadataKind {
-        CoreMetadataKind(rawValue: kind) ?? .unknown
-    }
+//    public func coreMetadataKind() -> CoreMetadataKind {
+//        CoreMetadataKind(rawValue: kind) ?? .unknown
+//    }
 }
 
 public struct CoreTargetStructDescriptor {
     let Flags: CoreContextDescriptorFlags
-    let parent: CoreTargetRelativeContextPointer
+    let parent: CoreTargetRelativeContextPointer<CoreInProgress>
+    let name: UnsafePointer<CChar>
+    let Fields: CoreTargetRelativeDirectPointer<Int>
     let NumFields: UInt32
     let FieldOffsetVectorOffset: UInt32
 }
@@ -51,7 +58,13 @@ public struct CoreTargetStructDescriptor {
 public struct CoreContextDescriptorFlags {
 }
 
-public struct CoreTargetRelativeContextPointer {
+public struct CoreTargetRelativeContextPointer<Runtime> {
+}
+
+public struct CoreTargetRelativeDirectPointer<Runtime> {
+}
+
+public struct CoreInProgress {
 }
 
 /*

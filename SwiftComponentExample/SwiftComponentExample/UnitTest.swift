@@ -30,7 +30,7 @@ extension UnitTest {
 
         let p = unsafeBitCast(AppleColorStyle.self as Any.Type, to: UnsafeMutablePointer<CoreStructMetadata>.self)
         let p0 = p.pointee
-        print("kind: \(p0.coreMetadataKind())")
+        //print("kind: \(p0.coreMetadataKind())")
 
         let m = Man(age: 3)
         withUnsafePointer(to: m) { pointer in
@@ -43,6 +43,34 @@ extension UnitTest {
         }
 
         testCharacter()
+
+        enum Style: UInt {
+            case color = 0x500
+            case bold = 0x501
+        }
+
+        struct P1 {
+            let style: Style
+        }
+
+        struct P2 {
+            let s: UInt
+        }
+
+        let p00 = P2(s: 0x201)
+
+        var p000 = P1(style: .bold)
+        withUnsafePointer(to: &p000) {
+            print($0)
+        }
+
+        let s = MemoryLayout<P2>.stride
+        let s1 = MemoryLayout<P1>.stride
+        let s0 = MemoryLayout<Style>.stride
+
+        print("*****: \(MemoryLayout<P1>.size) : \(MemoryLayout<P2>.stride)")
+
+        // let r = unsafeBitCast(p00, to: P1.self)
 
         print(#function)
     }
