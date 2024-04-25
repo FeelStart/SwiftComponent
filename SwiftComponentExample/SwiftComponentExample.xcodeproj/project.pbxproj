@@ -11,6 +11,7 @@
 		C52F7C752BA9277700374C7F /* SwiftComponentExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F7C742BA9277700374C7F /* SwiftComponentExampleTests.swift */; };
 		C54144FE2BD89B72002C1658 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54144FD2BD89B72002C1658 /* main.cpp */; };
 		C541453E2BD94059002C1658 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541453D2BD94059002C1658 /* main.swift */; };
+		C54145452BD9E88B002C1658 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54145432BD9E88B002C1658 /* Utils.cpp */; };
 		C54A2B802B81E95C005E2159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B7F2B81E95C005E2159 /* AppDelegate.swift */; };
 		C54A2B822B81E95C005E2159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B812B81E95C005E2159 /* SceneDelegate.swift */; };
 		C54A2B872B81E95C005E2159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54A2B852B81E95C005E2159 /* Main.storyboard */; };
@@ -74,6 +75,9 @@
 		C54144FD2BD89B72002C1658 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C541453B2BD94059002C1658 /* MainSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MainSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		C541453D2BD94059002C1658 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C54145432BD9E88B002C1658 /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		C54145442BD9E88B002C1658 /* Utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
+		C54145462BD9E905002C1658 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C54A2B7C2B81E95C005E2159 /* SwiftComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A2B7F2B81E95C005E2159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C54A2B812B81E95C005E2159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +134,9 @@
 		C54144FC2BD89B72002C1658 /* MainC++ */ = {
 			isa = PBXGroup;
 			children = (
+				C54145422BD9E877002C1658 /* Template */,
 				C54144FD2BD89B72002C1658 /* main.cpp */,
+				C54145462BD9E905002C1658 /* Header.h */,
 			);
 			path = "MainC++";
 			sourceTree = "<group>";
@@ -141,6 +147,15 @@
 				C541453D2BD94059002C1658 /* main.swift */,
 			);
 			path = MainSwift;
+			sourceTree = "<group>";
+		};
+		C54145422BD9E877002C1658 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				C54145432BD9E88B002C1658 /* Utils.cpp */,
+				C54145442BD9E88B002C1658 /* Utils.hpp */,
+			);
+			path = Template;
 			sourceTree = "<group>";
 		};
 		C54A2B732B81E95C005E2159 = {
@@ -368,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C54144FE2BD89B72002C1658 /* main.cpp in Sources */,
+				C54145452BD9E88B002C1658 /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

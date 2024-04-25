@@ -6,34 +6,11 @@
 //
 
 #include <iostream>
-
-struct Base {
-    int kind;
-};
-
-struct Run {
-    long duration;
-};
-
-struct People: Base, Run {
-    int age;
-};
-
-template <typename T, bool Nullable = false>
-using RelativeIndirectablePointer = int32_t;
-
-struct Logger {
-    RelativeIndirectablePointer<int, false> kind;
-};
+#include "Header.h"
 
 int main(int argc, const char * argv[]) {
-    auto p = People { 1, 20, 30 };
-    auto k = p.kind;
-    auto r = p.duration;
-    auto a = p.age;
-    auto logger = Logger { 1 };
-
-    std::cout<<sizeof(logger)<<std::endl;
+    auto r0 = Z::max(20, 10);
+    std::cout<<r0<<std::endl;
 
     return 0;
 }
