@@ -14,15 +14,20 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
 
         viewControllers = [
+            UINavigationController(rootViewController: AudioViewController()),
             UINavigationController(rootViewController: UserProfileViewController()),
-            UINavigationController(rootViewController: DetailViewController())
+            UINavigationController(rootViewController: DetailViewController()),
         ]
 
-        let meItem: UITabBarItem? = tabBar.items?[0]
+        let audioItem: UITabBarItem? = tabBar.items?[0]
+        audioItem?.title = "Audio"
+        audioItem?.image = UIImage(systemName: "airpodsmax")
+
+        let meItem: UITabBarItem? = tabBar.items?[1]
         meItem?.title = "Me"
         meItem?.image = UIImage(systemName: "house.circle.fill")
 
-        let detailItem: UITabBarItem? = tabBar.items?[1]
+        let detailItem: UITabBarItem? = tabBar.items?[2]
         detailItem?.title = "Detail"
         detailItem?.image = UIImage(systemName: "doc.richtext.zh")
     }

@@ -9,6 +9,7 @@
 #define Utils_hpp
 
 #include <stdio.h>
+#include <stdlib.h>
 
 namespace Z {
 
@@ -26,15 +27,24 @@ template<class T, int size = 10>
 class Array {
 public:
     Array() {
+        m_mem = (T *)malloc(size * sizeof(T));
         m_length = 0;
-        m_mem = malloc(size);
     }
 
     void addObject(T object) {
+        if (m_length >= size) {
+            return;
+        }
+
+        m_mem[m_length++] = object;
     }
-    
+
+    T objectAtIndex(int index) {
+        return m_mem[index];
+    }
+
 private:
-    void *m_mem;
+    T *m_mem;
     int m_length;
 };
 

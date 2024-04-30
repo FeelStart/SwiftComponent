@@ -10,12 +10,13 @@
 		C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507F74D2B82EF6D00225D3A /* TextNode.swift */; };
 		C507F7502B82F15100225D3A /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507F74F2B82F15100225D3A /* TextEditor.swift */; };
 		C51D7C892BABC78000709C71 /* SimpleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C882BABC78000709C71 /* SimpleLabel.swift */; };
-		C51D7C992BAD047600709C71 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C982BAD047600709C71 /* AudioPlayer.swift */; };
 		C52F7C6B2BA91A0500374C7F /* SwiftCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F7C6A2BA91A0500374C7F /* SwiftCore.swift */; };
 		C54145362BD901E0002C1658 /* CompilerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145352BD901E0002C1658 /* CompilerUtil.swift */; };
+		C54145AD2BDF8502002C1658 /* CoreAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145AC2BDF8502002C1658 /* CoreAudio.swift */; };
+		C54145AF2BE073C0002C1658 /* CoreAudioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */; };
+		C54145B42BE07653002C1658 /* CoreAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145B32BE07653002C1658 /* CoreAudioPlayer.swift */; };
 		C541E2362BD243C1002C1658 /* TaskHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541E2352BD243C1002C1658 /* TaskHook.swift */; };
 		C54206C62BB404DE0007F019 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54206C52BB404DE0007F019 /* Notification.swift */; };
-		C54206D62BBA4CF60007F019 /* AudioPlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54206D52BBA4CF60007F019 /* AudioPlayerProtocol.swift */; };
 		C54206E02BC37E1C0007F019 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54206DF2BC37E1C0007F019 /* Operator.swift */; };
 		C54A2B6A2B81E62E005E2159 /* SwiftComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = C54A2B692B81E62E005E2159 /* SwiftComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C54A2B722B81E6E1005E2159 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2B712B81E6E1005E2159 /* Label.swift */; };
@@ -31,12 +32,14 @@
 		C507F74D2B82EF6D00225D3A /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		C507F74F2B82F15100225D3A /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		C51D7C882BABC78000709C71 /* SimpleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLabel.swift; sourceTree = "<group>"; };
-		C51D7C982BAD047600709C71 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		C52F7C6A2BA91A0500374C7F /* SwiftCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCore.swift; sourceTree = "<group>"; };
 		C54145352BD901E0002C1658 /* CompilerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompilerUtil.swift; sourceTree = "<group>"; };
+		C54145AC2BDF8502002C1658 /* CoreAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudio.swift; sourceTree = "<group>"; };
+		C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioUtils.swift; sourceTree = "<group>"; };
+		C54145B22BE07502002C1658 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C54145B32BE07653002C1658 /* CoreAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioPlayer.swift; sourceTree = "<group>"; };
 		C541E2352BD243C1002C1658 /* TaskHook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHook.swift; sourceTree = "<group>"; };
 		C54206C52BB404DE0007F019 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		C54206D52BBA4CF60007F019 /* AudioPlayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerProtocol.swift; sourceTree = "<group>"; };
 		C54206DF2BC37E1C0007F019 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		C54A2B662B81E62E005E2159 /* SwiftComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54A2B692B81E62E005E2159 /* SwiftComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftComponent.h; sourceTree = "<group>"; };
@@ -72,8 +75,10 @@
 		C51D7C932BAD03CC00709C71 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				C51D7C982BAD047600709C71 /* AudioPlayer.swift */,
-				C54206D52BBA4CF60007F019 /* AudioPlayerProtocol.swift */,
+				C54145AC2BDF8502002C1658 /* CoreAudio.swift */,
+				C54145B32BE07653002C1658 /* CoreAudioPlayer.swift */,
+				C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */,
+				C54145B22BE07502002C1658 /* README.md */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -255,12 +260,12 @@
 			files = (
 				C51D7C892BABC78000709C71 /* SimpleLabel.swift in Sources */,
 				C5C4B4C52B97FF0900EDEA52 /* MetalView.swift in Sources */,
-				C54206D62BBA4CF60007F019 /* AudioPlayerProtocol.swift in Sources */,
 				C59D8E6C2BCE06960023A60E /* UIView+Extension.swift in Sources */,
-				C51D7C992BAD047600709C71 /* AudioPlayer.swift in Sources */,
+				C54145AD2BDF8502002C1658 /* CoreAudio.swift in Sources */,
 				C54A2B722B81E6E1005E2159 /* Label.swift in Sources */,
 				C507F7502B82F15100225D3A /* TextEditor.swift in Sources */,
 				C54A2BAC2B820597005E2159 /* ListView+DataSource.swift in Sources */,
+				C54145AF2BE073C0002C1658 /* CoreAudioUtils.swift in Sources */,
 				C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */,
 				C5A78F402B85CB9B003ED099 /* LabelView.swift in Sources */,
 				C54206C62BB404DE0007F019 /* Notification.swift in Sources */,
@@ -268,6 +273,7 @@
 				C54206E02BC37E1C0007F019 /* Operator.swift in Sources */,
 				C54145362BD901E0002C1658 /* CompilerUtil.swift in Sources */,
 				C541E2362BD243C1002C1658 /* TaskHook.swift in Sources */,
+				C54145B42BE07653002C1658 /* CoreAudioPlayer.swift in Sources */,
 				C54A2BAA2B82056F005E2159 /* ListView.swift in Sources */,
 				C52F7C6B2BA91A0500374C7F /* SwiftCore.swift in Sources */,
 			);

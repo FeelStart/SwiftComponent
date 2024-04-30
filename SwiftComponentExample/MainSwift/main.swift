@@ -26,8 +26,17 @@ let s = MemoryLayout<P2>.size
 let s1 = MemoryLayout<P1>.size
 let s0 = MemoryLayout<Style>.size
 
-let p0 = unsafeBitCast(p00, to: P1.self)
-
-print("\(p0.style)")
+//let p0 = unsafeBitCast(p00, to: P1.self)
+//print("\(p0.style)")
 
 print("end")
+
+struct M0 {
+    let age: Int
+}
+struct M {
+    let m: M0
+}
+
+print(MemoryLayout<M0>.size)
+print(MemoryLayout<M>.size)

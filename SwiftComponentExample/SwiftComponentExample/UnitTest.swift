@@ -57,6 +57,16 @@ extension UnitTest {
             let s: UInt
         }
 
+        struct P3 {
+            let a: Int
+            let b: Int
+        }
+
+        var p3 = P3(a: 0x201, b: 0x514)
+        withUnsafeBytes(of: &p3) {
+            print($0)
+        }
+
         let p00 = P2(s: 0x201)
 
         var p000 = P1(style: .bold)
@@ -95,6 +105,12 @@ extension UnitTest {
 
     @SomeGlobalActor
     func myActor() {
+    }
+}
+
+extension UnitTest {
+
+    static func testCodable() {
     }
 }
 
