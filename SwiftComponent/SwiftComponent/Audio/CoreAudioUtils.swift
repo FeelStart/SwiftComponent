@@ -17,7 +17,7 @@ extension CoreAudio {
     /// - inPropertyID: 属性 ID
     /// - Returns: 返回状态码
     @discardableResult
-    static func audioFileProperty<T>(url: URL, inData: UnsafeMutablePointer<T>, inPropertyID: ExtAudioFilePropertyID) -> OSStatus {
+    static func extAudioFileProperty<T>(url: URL, inData: UnsafeMutablePointer<T>, inPropertyID: ExtAudioFilePropertyID) -> OSStatus {
         var status = noErr
 
         // 打开文件
@@ -30,7 +30,7 @@ extension CoreAudio {
             ExtAudioFileDispose(fileRef)
         }
 
-        return audioFileProperty(fileRef: fileRef, inData: inData, inPropertyID: inPropertyID)
+        return extAudioFileProperty(fileRef: fileRef, inData: inData, inPropertyID: inPropertyID)
     }
 
     /// 获取音频文件属性
@@ -40,7 +40,7 @@ extension CoreAudio {
     /// - inPropertyID: 属性 ID
     /// - Returns: 返回状态码
     @discardableResult
-    static func audioFileProperty<T>(fileRef: ExtAudioFileRef, inData: UnsafeMutablePointer<T>, inPropertyID: ExtAudioFilePropertyID) -> OSStatus {
+    static func extAudioFileProperty<T>(fileRef: ExtAudioFileRef, inData: UnsafeMutablePointer<T>, inPropertyID: ExtAudioFilePropertyID) -> OSStatus {
         var status = noErr
 
         // 获取属性长度
@@ -62,5 +62,26 @@ extension CoreAudio {
 
         return status
     }
+
+    /// 获取音频文件属性
+    /// - Parameters:
+    /// - fileID: 打开的文件 ID
+    /// - inData: 属性类型
+    /// - inPropertyID: 属性 ID
+    /// - Returns: 返回状态码
+    @discardableResult
+    static func audioFileProperty<T>(fileID: AudioFileID, inData: UnsafeMutablePointer<T>, inPropertyID: ExtAudioFilePropertyID) -> OSStatus {
+        var status = noErr
+
+        // 获取属性
+        var size = UInt32(MemoryLayout<T>.stride)
+        status = AudioFileGetProperty(fileID,
+                                      inPropertyID,
+                                      &size,
+                                      inData)
+
+        return status
+    }
 }
+
 

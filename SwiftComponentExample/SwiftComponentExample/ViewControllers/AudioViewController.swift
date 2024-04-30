@@ -28,7 +28,7 @@ class AudioViewController: UIViewController {
     }
 
     func play() {
-        guard let url = Bundle.resource.url(forResource: "谁令你心痴", withExtension: "mp3", subdirectory: "Audio") else {
+        guard let url = Bundle.resource.url(forResource: "Chasing Dreams", withExtension: "mp3", subdirectory: "Audio") else {
             return
         }
 
