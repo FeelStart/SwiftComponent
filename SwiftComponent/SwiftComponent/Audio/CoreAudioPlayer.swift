@@ -29,12 +29,14 @@ extension CoreAudio.Player {
 
     @discardableResult
     public func play(url: URL) -> Bool {
+        // file format
         var streamBasicDescription = AudioStreamBasicDescription()
         status = CoreAudio.audioFileProperty(url: url, inData: &streamBasicDescription, inPropertyID: kExtAudioFileProperty_FileDataFormat)
         if status != noErr {
             return false
         }
 
+        // AudioQueue
         status = AudioQueueNewOutput(&streamBasicDescription,
                                      audioQueueNewOutputCallBack,
                                      Unmanaged.passUnretained(self).toOpaque(),
@@ -42,9 +44,26 @@ extension CoreAudio.Player {
                                      nil,
                                      0,
                                      &audioQueueRef)
-        if status != 0 {
+        if status != noErr {
             return false
         }
+
+        // Max packet size
+        var maxPacketSize = UInt32()
+        status = CoreAudio.audioFileProperty(url: url, inData: &maxPacketSize, inPropertyID: kAudioFilePropertyPacketSizeUpperBound)
+
+        // MP4格式等部分音频数据，需要设置 magic、gain 头。
+        // kAudioFilePropertyMagicCookieData
+        // AudioQueueSetProperty
+        //
+        // kAudioQueueParam_Volume
+        // AudioQueueSetParameter
+
+        // AudioQueueAllocateBuffer
+
+        // AudioFileReadPacketData
+
+        // AudioQueueEnqueueBuffer
 
         return true
     }

@@ -16,6 +16,7 @@ extension CoreAudio {
     /// - inData: 属性类型
     /// - inPropertyID: 属性 ID
     /// - Returns: 返回状态码
+    @discardableResult
     static func audioFileProperty<T>(url: URL, inData: UnsafeMutablePointer<T>, inPropertyID: ExtAudioFilePropertyID) -> OSStatus {
         var status = noErr
 
@@ -38,6 +39,7 @@ extension CoreAudio {
     /// - inData: 属性类型
     /// - inPropertyID: 属性 ID
     /// - Returns: 返回状态码
+    @discardableResult
     static func audioFileProperty<T>(fileRef: ExtAudioFileRef, inData: UnsafeMutablePointer<T>, inPropertyID: ExtAudioFilePropertyID) -> OSStatus {
         var status = noErr
 
@@ -45,7 +47,7 @@ extension CoreAudio {
         var propertySize: UInt32 = 0
         var writable: DarwinBoolean = false
         status = ExtAudioFileGetPropertyInfo(fileRef,
-                                             kExtAudioFileProperty_FileDataFormat,
+                                             inPropertyID,
                                              &propertySize,
                                              &writable)
         guard status == 0 else {
@@ -54,7 +56,7 @@ extension CoreAudio {
 
         // 获取属性
         status = ExtAudioFileGetProperty(fileRef,
-                                         kExtAudioFileProperty_FileDataFormat,
+                                         inPropertyID,
                                          &propertySize,
                                          inData)
 

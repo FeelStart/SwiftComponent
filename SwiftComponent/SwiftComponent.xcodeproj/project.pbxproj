@@ -15,6 +15,7 @@
 		C54145AD2BDF8502002C1658 /* CoreAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145AC2BDF8502002C1658 /* CoreAudio.swift */; };
 		C54145AF2BE073C0002C1658 /* CoreAudioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */; };
 		C54145B42BE07653002C1658 /* CoreAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145B32BE07653002C1658 /* CoreAudioPlayer.swift */; };
+		C54145B62BE081A4002C1658 /* CoreAudioPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145B52BE081A4002C1658 /* CoreAudioPlayerState.swift */; };
 		C541E2362BD243C1002C1658 /* TaskHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541E2352BD243C1002C1658 /* TaskHook.swift */; };
 		C54206C62BB404DE0007F019 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54206C52BB404DE0007F019 /* Notification.swift */; };
 		C54206E02BC37E1C0007F019 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54206DF2BC37E1C0007F019 /* Operator.swift */; };
@@ -38,6 +39,7 @@
 		C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioUtils.swift; sourceTree = "<group>"; };
 		C54145B22BE07502002C1658 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C54145B32BE07653002C1658 /* CoreAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioPlayer.swift; sourceTree = "<group>"; };
+		C54145B52BE081A4002C1658 /* CoreAudioPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioPlayerState.swift; sourceTree = "<group>"; };
 		C541E2352BD243C1002C1658 /* TaskHook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHook.swift; sourceTree = "<group>"; };
 		C54206C52BB404DE0007F019 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		C54206DF2BC37E1C0007F019 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				C54145AC2BDF8502002C1658 /* CoreAudio.swift */,
 				C54145B32BE07653002C1658 /* CoreAudioPlayer.swift */,
+				C54145B52BE081A4002C1658 /* CoreAudioPlayerState.swift */,
 				C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */,
 				C54145B22BE07502002C1658 /* README.md */,
 			);
@@ -261,6 +264,7 @@
 				C51D7C892BABC78000709C71 /* SimpleLabel.swift in Sources */,
 				C5C4B4C52B97FF0900EDEA52 /* MetalView.swift in Sources */,
 				C59D8E6C2BCE06960023A60E /* UIView+Extension.swift in Sources */,
+				C54145B62BE081A4002C1658 /* CoreAudioPlayerState.swift in Sources */,
 				C54145AD2BDF8502002C1658 /* CoreAudio.swift in Sources */,
 				C54A2B722B81E6E1005E2159 /* Label.swift in Sources */,
 				C507F7502B82F15100225D3A /* TextEditor.swift in Sources */,
