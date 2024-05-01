@@ -13,6 +13,7 @@ fileprivate func audioQueueNewOutputCallBack(customData: UnsafeMutableRawPointer
     }
 
     let player = Unmanaged<CoreAudio.Player>.fromOpaque(customData).takeUnretainedValue()
+    player.fillBuffer(bufferRef)
 }
 
 extension CoreAudio {
@@ -20,6 +21,7 @@ extension CoreAudio {
         var status = OSStatus()
         var audioQueueRef: AudioQueueRef?
         var state: State?
+        var audioFileID: AudioFileID?
 
         public init() {
         }
@@ -31,7 +33,6 @@ extension CoreAudio.Player {
     @discardableResult
     public func play(url: URL) -> Bool {
         // Open file
-        var audioFileID: AudioFileID?
         status = AudioFileOpenURL(url as CFURL,
                                   .readPermission,
                                   0,
@@ -59,11 +60,16 @@ extension CoreAudio.Player {
             return false
         }
 
-
-
         // Max packet size
         var maxPacketSize: UInt32 = 0
         status = CoreAudio.audioFileProperty(fileID: audioFileID, inData: &maxPacketSize, inPropertyID: kAudioFilePropertyPacketSizeUpperBound)
+
+        state = State(bufferSize: 4096,
+                      numBuffer: 3,
+                      buffers: [AudioQueueBufferRef](),
+                      maxPacketSize: maxPacketSize,
+                      numPacket: 4096 / maxPacketSize)
+        guard var state else { return false }
 
         // MP4格式等部分音频数据，需要设置 magic、gain 头。
         // kAudioFilePropertyMagicCookieData
@@ -72,35 +78,57 @@ extension CoreAudio.Player {
         // kAudioQueueParam_Volume
         // AudioQueueSetParameter
 
-        // AudioQueueAllocateBuffer
-        let bufferSize: UInt32 = 4096
-        var buffers = [AudioQueueBufferRef]()
-        for i in 0...2 {
+        for _ in 0..<state.numBuffer {
             var buffer: AudioQueueBufferRef?
-            status = AudioQueueAllocateBuffer(audioQueueRef, bufferSize, &buffer)
+            status = AudioQueueAllocateBuffer(audioQueueRef, state.bufferSize, &buffer)
             if status != noErr {
                 return false
             }
 
             if let buffer {
-                buffers.append(buffer)
+                state.buffers.append(buffer)
             }
         }
 
-        // AudioFileReadPacketData
-        var currentBufferSize = bufferSize
-        var currentPacketsIndex: UInt32 = 0
-        var buffer = buffers.first
-        status = AudioFileReadPacketData(audioFileID,
-                                         false,
-                                         &currentBufferSize,
-                                         nil,
-                                         0,
-                                         &currentPacketsIndex,
-                                         &buffer)
+        for idx in 0..<state.numBuffer {
+            let buffer = state.buffers[Int(idx)]
+            fillBuffer(buffer)
+            status = AudioQueueEnqueueBuffer(audioQueueRef,
+                                             buffer,
+                                             0,
+                                             nil)
+        }
 
-        // AudioQueueEnqueueBuffer
+        AudioQueueStart(audioQueueRef, nil)
 
         return true
+    }
+
+    /// Note: 只能读取 PCM、WAC 等格式的文件
+    @discardableResult
+    func fillBuffer(_ bufferRef: AudioQueueBufferRef) -> OSStatus {
+        guard var state, let audioFileID else { return noErr }
+
+        var buffer = bufferRef.pointee
+        //memset(buffer.mAudioData, 0, Int(state.bufferSize))
+        //buffer.mAudioDataByteSize = state.bufferSize
+
+        // TODO: Lock
+
+        // AudioFileReadPacketData
+        var bufferSize: UInt32 = state.bufferSize
+        let packetIndex = state.packetIndex
+        var numPacket = state.numPacket
+        var descriptions = Array(repeating: AudioStreamPacketDescription(), count: Int(numPacket))
+        status = AudioFileReadPacketData(audioFileID,
+                                         false,
+                                         &bufferSize,
+                                         &descriptions,
+                                         Int64(packetIndex),
+                                         &numPacket,
+                                         bufferRef)
+        state.packetIndex += numPacket
+
+        return status
     }
 }

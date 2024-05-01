@@ -24,6 +24,7 @@
 		C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */; };
 		C54A2BAA2B82056F005E2159 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA92B82056F005E2159 /* ListView.swift */; };
 		C54A2BAC2B820597005E2159 /* ListView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BAB2B820597005E2159 /* ListView+DataSource.swift */; };
+		C599CCCD2BE1400E00EEEC60 /* CoreAudioConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599CCCC2BE1400E00EEEC60 /* CoreAudioConverter.swift */; };
 		C59D8E6C2BCE06960023A60E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59D8E6B2BCE06960023A60E /* UIView+Extension.swift */; };
 		C5A78F402B85CB9B003ED099 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A78F3F2B85CB9B003ED099 /* LabelView.swift */; };
 		C5C4B4C52B97FF0900EDEA52 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C4B4C42B97FF0900EDEA52 /* MetalView.swift */; };
@@ -49,6 +50,7 @@
 		C54A2BA62B81FF8B005E2159 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		C54A2BA92B82056F005E2159 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		C54A2BAB2B820597005E2159 /* ListView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListView+DataSource.swift"; sourceTree = "<group>"; };
+		C599CCCC2BE1400E00EEEC60 /* CoreAudioConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioConverter.swift; sourceTree = "<group>"; };
 		C59D8E6B2BCE06960023A60E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C5A78F3F2B85CB9B003ED099 /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		C5C4B4C42B97FF0900EDEA52 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				C54145B52BE081A4002C1658 /* CoreAudioPlayerState.swift */,
 				C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */,
 				C54145B22BE07502002C1658 /* README.md */,
+				C599CCCC2BE1400E00EEEC60 /* CoreAudioConverter.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				C54A2BAC2B820597005E2159 /* ListView+DataSource.swift in Sources */,
 				C54145AF2BE073C0002C1658 /* CoreAudioUtils.swift in Sources */,
 				C54A2BA72B81FF8B005E2159 /* UIColor+Extensions.swift in Sources */,
+				C599CCCD2BE1400E00EEEC60 /* CoreAudioConverter.swift in Sources */,
 				C5A78F402B85CB9B003ED099 /* LabelView.swift in Sources */,
 				C54206C62BB404DE0007F019 /* Notification.swift in Sources */,
 				C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */,

@@ -10,9 +10,10 @@ import AudioToolbox
 extension CoreAudio.Player {
     struct State {
         let bufferSize: UInt32
-        /// 已完成，正在处理，已加载
-        var buffers: [AudioQueueBuffer]
-        var currentBufferIndex: UInt32 = 0
-        var currentPacketIndex: UInt32 = 0
+        let numBuffer: UInt32
+        var buffers: [AudioQueueBufferRef]
+        let maxPacketSize: UInt32
+        let numPacket: UInt32
+        var packetIndex: UInt32 = 0
     }
 }

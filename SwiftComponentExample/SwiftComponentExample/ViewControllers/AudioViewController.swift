@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import AudioToolbox
 import SwiftComponent
+import AVFoundation
 
 /*
  * https://cloud.tencent.com/developer/article/1438299
@@ -17,6 +17,8 @@ import SwiftComponent
 class AudioViewController: UIViewController {
 
     let player = CoreAudio.Player()
+
+    var avPlayer: AVPlayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +30,12 @@ class AudioViewController: UIViewController {
     }
 
     func play() {
-        guard let url = Bundle.resource.url(forResource: "Chasing Dreams", withExtension: "mp3", subdirectory: "Audio") else {
+        guard let url = Bundle.resource.url(forResource: "Chasing-Dreams", withExtension: "wav", subdirectory: "Audio") else {
             return
         }
+
+        //avPlayer = AVPlayer(url: url)
+        //avPlayer.play()
 
         player.play(url: url)
     }
