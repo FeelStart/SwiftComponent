@@ -51,9 +51,9 @@ extension CoreAudio.Player {
         // AudioQueue
         status = AudioQueueNewOutput(&streamBasicDescription,
                                      audioQueueNewOutputCallBack,
-                                     Unmanaged.passUnretained(self).toOpaque(),
-                                     nil,
-                                     nil,
+                                     nil, // Unmanaged.passUnretained(self).toOpaque(),
+                                     CFRunLoopGetMain(),
+                                     CFRunLoopMode.commonModes.rawValue,
                                      0,
                                      &audioQueueRef)
         guard status == noErr, let audioQueueRef else {
@@ -64,11 +64,11 @@ extension CoreAudio.Player {
         var maxPacketSize: UInt32 = 0
         status = CoreAudio.audioFileProperty(fileID: audioFileID, inData: &maxPacketSize, inPropertyID: kAudioFilePropertyPacketSizeUpperBound)
 
-        state = State(bufferSize: 4096,
+        state = State(bufferSize: 1024,
                       numBuffer: 3,
                       buffers: [AudioQueueBufferRef](),
                       maxPacketSize: maxPacketSize,
-                      numPacket: 4096 / maxPacketSize)
+                      numPacket: 1024 / maxPacketSize)
         guard var state else { return false }
 
         // MP4格式等部分音频数据，需要设置 magic、gain 头。
@@ -109,7 +109,7 @@ extension CoreAudio.Player {
     func fillBuffer(_ bufferRef: AudioQueueBufferRef) -> OSStatus {
         guard var state, let audioFileID else { return noErr }
 
-        var buffer = bufferRef.pointee
+        //var buffer = bufferRef.pointee
         //memset(buffer.mAudioData, 0, Int(state.bufferSize))
         //buffer.mAudioDataByteSize = state.bufferSize
 
