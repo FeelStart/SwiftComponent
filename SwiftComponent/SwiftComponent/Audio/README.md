@@ -17,13 +17,15 @@
 ### OSStatus 错误码查询
 
 https://www.osstatus.com/
+https://www.sony.com/zh-cn/electronics/support/home-video-blu-ray-disc-players-recorders/bdp-s5500/articles/00120880
 
 ### 库
 * https://github.com/muhku/FreeStreamer
 * https://github.com/mattgallagher/AudioStreamer
 * https://github.com/ooper-shlab/iPhoneACFileConvertTest-Swift/tree/master、
 * https://cocoapods.org/pods/SwiftAudioPlayer
-
+* https://github.com/liuxinxiaoyue/LearnAudioToolBox
+* https://github.com/coyingcat/mPlayer
 
 ### 问题
 * 我用 AudioToolBox 播放 mp3 文件，但是 readPacket 时，buffer 会出错？我在网上查询，但是并没有发现有用的资料。刚刚，我想难道是不支持 mp3 文件，要 PCM 数据才可以？

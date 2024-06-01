@@ -105,6 +105,7 @@ extension CoreAudio.Player {
     }
 
     /// Note: 只能读取 PCM、WAC 等格式的文件
+    /// TODO：VBR（Variable Bit Rate，可变比特率），要在这里获取 desc，并在 enqueue 时赋值。
     @discardableResult
     func fillBuffer(_ bufferRef: AudioQueueBufferRef) -> OSStatus {
         guard var state, let audioFileID else { return noErr }

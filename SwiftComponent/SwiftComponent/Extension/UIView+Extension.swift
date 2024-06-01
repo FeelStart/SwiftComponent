@@ -52,7 +52,7 @@ extension UIView {
                 heightAnchor.constraint(equalToConstant: height),
                 leftAnchor.constraint(equalTo: view.leftAnchor),
                 rightAnchor.constraint(equalTo: view.rightAnchor),
-                bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             ])
         }
 
@@ -65,6 +65,147 @@ extension UIView {
         }
     }
 }
+
+/*
+ import UIKit
+
+ extension UIView {
+
+     @objc
+     public var zKeyboardLayoutGuide: UILayoutGuide {
+         if let layoutGuide = layoutGuides.first(where: { $0.identifier == KeyboardLayoutGuide.identifer }) {
+             return layoutGuide
+         }
+         let layoutGuide = KeyboardLayoutGuide()
+         addLayoutGuide(layoutGuide)
+         layoutGuide.setupConstraints()
+         return layoutGuide
+     }
+
+ }
+
+ class KeyboardLayoutGuide: UILayoutGuide {
+
+     static var identifer = "zKeyboardLayoutGuideIdentifer"
+
+     var heightConstraint: NSLayoutConstraint?
+
+     override init() {
+         super.init()
+
+         identifier = Self.identifer
+
+         let center = NotificationCenter.default
+         center.addObserver(self, selector: #selector(keyboardChangeNotification(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+         center.addObserver(self, selector: #selector(keyboardChangeNotification(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+     }
+
+     @available(*, unavailable)
+     required init?(coder: NSCoder) {
+         fatalError("init(coder:) has not been implemented")
+     }
+
+     func setupConstraints() {
+         guard let view = owningView else { return }
+
+         heightConstraint = heightAnchor.constraint(equalToConstant: 0)
+         NSLayoutConstraint.activate([
+             heightConstraint!,
+             leftAnchor.constraint(equalTo: view.leftAnchor),
+             rightAnchor.constraint(equalTo: view.rightAnchor),
+             bottomAnchor.constraint(equalTo: view.bottomAnchor)
+         ])
+     }
+
+     @objc
+     func keyboardChangeNotification(_ notification: NSNotification) {
+         guard let userInfo = notification.userInfo,
+               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+             return
+         }
+
+         heightConstraint?.constant = if UIResponder.keyboardWillHideNotification == notification.name { self.owningView?.safeAreaInsets.bottom ?? 0 } else { keyboardFrame.cgRectValue.height }
+
+         if let _ = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval {
+             UIView.performWithoutAnimation {
+                 self.owningView?.layoutIfNeeded()
+             }
+         }
+     }
+
+ }
+ */
+
+/*
+ extension UIView {
+
+     @available(iOS, introduced: 13, deprecated: 15)
+     @objc
+     public var keyboardLayoutGuide: UILayoutGuide {
+         if let layoutGuide = layoutGuides.first(where: { $0.identifier == KeyboardLayoutGuide.identifer }) {
+             return layoutGuide
+         }
+         let layoutGuide = KeyboardLayoutGuide()
+         addLayoutGuide(layoutGuide)
+         layoutGuide.setupConstraints()
+         return layoutGuide
+     }
+
+ }
+
+ class KeyboardLayoutGuide: UILayoutGuide {
+
+     static var identifer = "iOS13-iOS15-KeyboardLayoutGuideIdentifer"
+
+     var heightConstraint: NSLayoutConstraint?
+
+     override init() {
+         super.init()
+
+         identifier = Self.identifer
+
+         let center = NotificationCenter.default
+         center.addObserver(self, selector: #selector(keyboardChangeNotification(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+         center.addObserver(self, selector: #selector(keyboardChangeNotification(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+     }
+
+     @available(*, unavailable)
+     required init?(coder: NSCoder) {
+         fatalError("init(coder:) has not been implemented")
+     }
+
+     func setupConstraints() {
+         guard let view = owningView else { return }
+
+         heightConstraint = heightAnchor.constraint(equalToConstant: 0)
+         NSLayoutConstraint.activate([
+             heightConstraint!,
+             leftAnchor.constraint(equalTo: view.leftAnchor),
+             rightAnchor.constraint(equalTo: view.rightAnchor),
+             bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+         ])
+     }
+
+     @objc
+     func keyboardChangeNotification(_ notification: NSNotification) {
+         guard let userInfo = notification.userInfo,
+               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+             return
+         }
+
+         let height: CGFloat = if notification.name == UIResponder.keyboardWillHideNotification { 0.0 } else { keyboardFrame.cgRectValue.height }
+         heightConstraint?.constant = height
+
+         if let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? CGFloat {
+             UIView.performWithoutAnimation {
+                 self.owningView?.layoutIfNeeded()
+             }
+         }
+     }
+
+ }
+
+ */
 
 /*
 
