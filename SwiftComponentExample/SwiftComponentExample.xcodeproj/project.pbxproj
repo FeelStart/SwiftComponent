@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C51D7C632BA93D5B00709C71 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C622BA93D5B00709C71 /* UnitTest.swift */; };
+		C52745BD2C17F0DD001BC383 /* CString.c in Sources */ = {isa = PBXBuildFile; fileRef = C52745BC2C17F0DD001BC383 /* CString.c */; };
+		C52745C02C17F14C001BC383 /* CMain.c in Sources */ = {isa = PBXBuildFile; fileRef = C52745BF2C17F14C001BC383 /* CMain.c */; };
 		C52F7C752BA9277700374C7F /* SwiftComponentExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F7C742BA9277700374C7F /* SwiftComponentExampleTests.swift */; };
+		C53FE6752C0D570300401588 /* Lexical.c in Sources */ = {isa = PBXBuildFile; fileRef = C53FE6742C0D570300401588 /* Lexical.c */; };
+		C53FE6A42C12FDF800401588 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C53FE6A22C12FDF800401588 /* Test.cpp */; };
 		C54144FE2BD89B72002C1658 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54144FD2BD89B72002C1658 /* main.cpp */; };
 		C541453E2BD94059002C1658 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C541453D2BD94059002C1658 /* main.swift */; };
 		C54145452BD9E88B002C1658 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54145432BD9E88B002C1658 /* Utils.cpp */; };
@@ -82,8 +86,16 @@
 
 /* Begin PBXFileReference section */
 		C51D7C622BA93D5B00709C71 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
+		C52745BB2C17F0DD001BC383 /* CString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CString.h; sourceTree = "<group>"; };
+		C52745BC2C17F0DD001BC383 /* CString.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CString.c; sourceTree = "<group>"; };
+		C52745BE2C17F14C001BC383 /* CMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMain.h; sourceTree = "<group>"; };
+		C52745BF2C17F14C001BC383 /* CMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CMain.c; sourceTree = "<group>"; };
 		C52F7C722BA9277700374C7F /* SwiftComponentExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftComponentExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52F7C742BA9277700374C7F /* SwiftComponentExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftComponentExampleTests.swift; sourceTree = "<group>"; };
+		C53FE6732C0D570300401588 /* Lexical.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lexical.h; sourceTree = "<group>"; };
+		C53FE6742C0D570300401588 /* Lexical.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Lexical.c; sourceTree = "<group>"; };
+		C53FE6A22C12FDF800401588 /* Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		C53FE6A32C12FDF800401588 /* Test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
 		C54144FB2BD89B72002C1658 /* MainC++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "MainC++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54144FD2BD89B72002C1658 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C541453B2BD94059002C1658 /* MainSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MainSwift; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +161,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C52745BA2C17F0C9001BC383 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				C52745BB2C17F0DD001BC383 /* CString.h */,
+				C52745BC2C17F0DD001BC383 /* CString.c */,
+				C52745BE2C17F14C001BC383 /* CMain.h */,
+				C52745BF2C17F14C001BC383 /* CMain.c */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
 		C52F7C732BA9277700374C7F /* SwiftComponentExampleTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,12 +180,25 @@
 			path = SwiftComponentExampleTests;
 			sourceTree = "<group>";
 		};
+		C53FE6A12C12FDE700401588 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				C53FE6A22C12FDF800401588 /* Test.cpp */,
+				C53FE6A32C12FDF800401588 /* Test.hpp */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		C54144FC2BD89B72002C1658 /* MainC++ */ = {
 			isa = PBXGroup;
 			children = (
+				C52745BA2C17F0C9001BC383 /* C */,
+				C53FE6A12C12FDE700401588 /* Test */,
 				C54145422BD9E877002C1658 /* Template */,
 				C54144FD2BD89B72002C1658 /* main.cpp */,
 				C54145462BD9E905002C1658 /* Header.h */,
+				C53FE6732C0D570300401588 /* Lexical.h */,
+				C53FE6742C0D570300401588 /* Lexical.c */,
 			);
 			path = "MainC++";
 			sourceTree = "<group>";
@@ -452,6 +488,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52745C02C17F14C001BC383 /* CMain.c in Sources */,
+				C52745BD2C17F0DD001BC383 /* CString.c in Sources */,
+				C53FE6752C0D570300401588 /* Lexical.c in Sources */,
+				C53FE6A42C12FDF800401588 /* Test.cpp in Sources */,
 				C54144FE2BD89B72002C1658 /* main.cpp in Sources */,
 				C54145452BD9E88B002C1658 /* Utils.cpp in Sources */,
 			);

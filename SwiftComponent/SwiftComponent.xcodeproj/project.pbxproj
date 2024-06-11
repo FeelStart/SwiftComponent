@@ -10,7 +10,9 @@
 		C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507F74D2B82EF6D00225D3A /* TextNode.swift */; };
 		C507F7502B82F15100225D3A /* TextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C507F74F2B82F15100225D3A /* TextEditor.swift */; };
 		C51D7C892BABC78000709C71 /* SimpleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C882BABC78000709C71 /* SimpleLabel.swift */; };
+		C52745C22C181BD0001BC383 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52745C12C181BD0001BC383 /* NameSpace.swift */; };
 		C52F7C6B2BA91A0500374C7F /* SwiftCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F7C6A2BA91A0500374C7F /* SwiftCore.swift */; };
+		C53FE6792C0DC09700401588 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53FE6782C0DC09700401588 /* Buildable.swift */; };
 		C54145362BD901E0002C1658 /* CompilerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145352BD901E0002C1658 /* CompilerUtil.swift */; };
 		C54145AD2BDF8502002C1658 /* CoreAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145AC2BDF8502002C1658 /* CoreAudio.swift */; };
 		C54145AF2BE073C0002C1658 /* CoreAudioUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */; };
@@ -34,7 +36,9 @@
 		C507F74D2B82EF6D00225D3A /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		C507F74F2B82F15100225D3A /* TextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditor.swift; sourceTree = "<group>"; };
 		C51D7C882BABC78000709C71 /* SimpleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLabel.swift; sourceTree = "<group>"; };
+		C52745C12C181BD0001BC383 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		C52F7C6A2BA91A0500374C7F /* SwiftCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCore.swift; sourceTree = "<group>"; };
+		C53FE6782C0DC09700401588 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
 		C54145352BD901E0002C1658 /* CompilerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompilerUtil.swift; sourceTree = "<group>"; };
 		C54145AC2BDF8502002C1658 /* CoreAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudio.swift; sourceTree = "<group>"; };
 		C54145AE2BE073C0002C1658 /* CoreAudioUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioUtils.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
+		C53FE6772C0DC08900401588 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C53FE6782C0DC09700401588 /* Buildable.swift */,
+				C52745C12C181BD0001BC383 /* NameSpace.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		C54145342BD901AE002C1658 /* Compiler */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +146,7 @@
 		C54A2B682B81E62E005E2159 /* SwiftComponent */ = {
 			isa = PBXGroup;
 			children = (
+				C53FE6772C0DC08900401588 /* Common */,
 				C54145342BD901AE002C1658 /* Compiler */,
 				C541E2342BD243B4002C1658 /* Hook */,
 				C59D8E6A2BCE06860023A60E /* Extension */,
@@ -264,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53FE6792C0DC09700401588 /* Buildable.swift in Sources */,
 				C51D7C892BABC78000709C71 /* SimpleLabel.swift in Sources */,
 				C5C4B4C52B97FF0900EDEA52 /* MetalView.swift in Sources */,
 				C59D8E6C2BCE06960023A60E /* UIView+Extension.swift in Sources */,
@@ -280,6 +295,7 @@
 				C507F74E2B82EF6D00225D3A /* TextNode.swift in Sources */,
 				C54206E02BC37E1C0007F019 /* Operator.swift in Sources */,
 				C54145362BD901E0002C1658 /* CompilerUtil.swift in Sources */,
+				C52745C22C181BD0001BC383 /* NameSpace.swift in Sources */,
 				C541E2362BD243C1002C1658 /* TaskHook.swift in Sources */,
 				C54145B42BE07653002C1658 /* CoreAudioPlayer.swift in Sources */,
 				C54A2BAA2B82056F005E2159 /* ListView.swift in Sources */,

@@ -10,4 +10,10 @@
 
 #include "Utils.hpp"
 
+
+#pragma mark - C
+
+#include "CMain.h"
+#include "CString.h"
+
 #endif /* Header_h */

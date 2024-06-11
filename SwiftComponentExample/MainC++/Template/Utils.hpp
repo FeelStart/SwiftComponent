@@ -13,6 +13,25 @@
 
 namespace Z {
 
+template<typename T> concept NotIntT = sizeof(T) != sizeof(int);
+
+template<typename T> concept addable = requires (T a, T b) {
+    a + b;
+};
+
+template<typename T>
+auto sum(T a, T b) requires addable<T> {
+    return a + b;
+};
+
+template<NotIntT T>
+struct NotInt {
+private:
+    T value;
+public:
+    NotInt<T>(T value): value(value) {};
+};
+
 template<class T>
 T max(T a, T b) {
     return a < b ? b : a;
