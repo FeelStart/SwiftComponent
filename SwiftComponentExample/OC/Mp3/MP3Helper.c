@@ -56,51 +56,51 @@ void mp3_tag2_dump(FILE *file, MP3TAG2 tag)
 
         size_t bodySize = mp3_convertCharsToIngetal(header.size, 4, 0b1111111);
 
-        char *identifier = mp3_tag3_identifier_detail(header);
+        char identifier[100];
+        mp3_tag3_identifier_detail(header, identifier);
+
+        mp3_print(header.identifier);
+        printf("\n");
 
         char m_body[bodySize];
         fread(m_body, bodySize, 1, file);
 
         totalReadCount += headerSize + bodySize;
 
-        printf("%s", identifier);
-
     } while(totalReadCount < totalsize);
 }
 
 #pragma mark - Other
 
-char *mp3_tag3_identifier_detail(MP3TAG2FrameHeader header)
+void mp3_tag3_identifier_detail(MP3TAG2FrameHeader header, char *identifier)
 {
-    char *identifier = mp3_uintsToChars(header.identifier, 4);
+    mp3_uintsToChars(header.identifier, identifier);
     if (strcmp(identifier, "Iden") == 0) {
-        return "Description";
+        identifier = "Description";
     } else if (strcmp(identifier, "TRCK") == 0) {
-        return "Track number";
+        identifier = "Track number";
     } else if (strcmp(identifier, "TENC") == 0) {
-        return "Encoded By";
+        identifier = "Encoded By";
     } else if (strcmp(identifier, "WXXX") == 0) {
-        return "URL";
+        identifier = "URL";
     } else if (strcmp(identifier, "TCOP") == 0) {
-        return "Frame identifier";
+        identifier = "Frame identifier";
     } else if (strcmp(identifier, "TOPE") == 0) {
-        return "Original Artist";
+        identifier = "Original Artist";
     } else if (strcmp(identifier, "TCOM") == 0) {
-        return "Composer";
+        identifier = "Composer";
     } else if (strcmp(identifier, "TCON") == 0) {
-        return "Genre";
+        identifier = "Genre";
     } else if (strcmp(identifier, "COMM") == 0) {
-        return "Comments";
+        identifier = "Comments";
     } else if (strcmp(identifier, "TYER") == 0) {
-        return "Year";
+        identifier = "Year";
     } else if (strcmp(identifier, "TALB") == 0) {
-        return "Album";
+        identifier = "Album";
     } else if (strcmp(identifier, "TPE1") == 0) {
-        return "Artist";
+        identifier = "Artist";
     } else if (strcmp(identifier, "TIT2") == 0) {
-        return "Song name";
+        identifier = "Song name";
     }
-
-    return identifier;
 }
 

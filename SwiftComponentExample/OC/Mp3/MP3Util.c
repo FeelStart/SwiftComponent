@@ -29,12 +29,24 @@ size_t mp3_powCharsToIngetal(uint8_t *value, size_t size, uint8_t exponent)
     return result;
 }
 
-char *mp3_uintsToChars(uint8_t *value, size_t size)
+void mp3_uintsToChars(uint8_t *value, char *result)
 {
-    char result[size];
+    size_t size = sizeof(value);
     for (size_t i = 0; i < size; i++) {
         result[i] = value[i];
     }
+}
 
-    return result;
+void mp3_print(uint8_t *value)
+{
+    size_t size = sizeof(value);
+
+    char chars[size];
+    for (size_t i = 0; i < size; i++) {
+        chars[i] = value[i];
+    }
+
+    for (size_t i = 0; i < size; i++) {
+        printf("%c", chars[i]);
+    }
 }

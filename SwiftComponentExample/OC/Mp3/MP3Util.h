@@ -15,6 +15,8 @@ size_t mp3_convertCharsToIngetal(uint8_t *value, size_t size, uint8_t exponent);
 
 size_t mp3_powCharsToIngetal(uint8_t *value, size_t size, uint8_t exponent);
 
-char *mp3_uintsToChars(uint8_t *value, size_t size);
+void mp3_uintsToChars(uint8_t *value, char *result);
+
+void mp3_print(uint8_t *value);
 
 #endif /* MP3Util_h */
