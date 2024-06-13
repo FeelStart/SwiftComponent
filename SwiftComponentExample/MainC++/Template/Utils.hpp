@@ -10,13 +10,31 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <type_traits>
 
 namespace Z {
+
+template<typename T, typename U>
+struct is_same: std::false_type  {};
+
+template<typename T>
+struct is_same<T, T>: std::true_type {};
+
+template< class T, class U >
+inline constexpr bool is_same_v = is_same<T, U>::value;
 
 template<typename T> concept NotIntT = sizeof(T) != sizeof(int);
 
 template<typename T> concept addable = requires (T a, T b) {
     a + b;
+};
+
+template<typename T>
+struct Tpye {
+};
+
+template<>
+struct Tpye<int> {
 };
 
 template<typename T>

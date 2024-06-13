@@ -8,6 +8,7 @@
 #ifndef Header_h
 #define Header_h
 
+#include "Test.hpp"
 #include "Utils.hpp"
 
 
@@ -15,5 +16,9 @@
 
 #include "CMain.h"
 #include "CString.h"
+
+#pragma mark - Other
+
+#include "lame.h"
 
 #endif /* Header_h */

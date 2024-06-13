@@ -10,6 +10,16 @@
 		C51D7C632BA93D5B00709C71 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D7C622BA93D5B00709C71 /* UnitTest.swift */; };
 		C52745BD2C17F0DD001BC383 /* CString.c in Sources */ = {isa = PBXBuildFile; fileRef = C52745BC2C17F0DD001BC383 /* CString.c */; };
 		C52745C02C17F14C001BC383 /* CMain.c in Sources */ = {isa = PBXBuildFile; fileRef = C52745BF2C17F14C001BC383 /* CMain.c */; };
+		C52745E72C198B31001BC383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C52745E62C198B31001BC383 /* AppDelegate.m */; };
+		C52745EA2C198B31001BC383 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C52745E92C198B31001BC383 /* SceneDelegate.m */; };
+		C52745ED2C198B31001BC383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52745EC2C198B31001BC383 /* ViewController.m */; };
+		C52745F02C198B31001BC383 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C52745EF2C198B31001BC383 /* Base */; };
+		C52745F22C198B32001BC383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52745F12C198B32001BC383 /* Assets.xcassets */; };
+		C52745F52C198B32001BC383 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C52745F42C198B32001BC383 /* Base */; };
+		C52745F82C198B32001BC383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C52745F72C198B32001BC383 /* main.m */; };
+		C52745FF2C198B42001BC383 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C52745FD2C198B42001BC383 /* libmp3lame.a */; };
+		C52746012C1997C5001BC383 /* Chasing Dreams.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C52746002C1997C5001BC383 /* Chasing Dreams.mp3 */; };
+		C52746072C199D00001BC383 /* AudioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C52746062C199D00001BC383 /* AudioHelper.m */; };
 		C52F7C752BA9277700374C7F /* SwiftComponentExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F7C742BA9277700374C7F /* SwiftComponentExampleTests.swift */; };
 		C53FE6752C0D570300401588 /* Lexical.c in Sources */ = {isa = PBXBuildFile; fileRef = C53FE6742C0D570300401588 /* Lexical.c */; };
 		C53FE6A42C12FDF800401588 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C53FE6A22C12FDF800401588 /* Test.cpp */; };
@@ -28,6 +38,8 @@
 		C54A2BA22B81ED0D005E2159 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A2BA12B81ED0D005E2159 /* UserProfileViewController.swift */; };
 		C59D8E5B2BCD21070023A60E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59D8E5A2BCD21070023A60E /* DetailViewController.swift */; };
 		C5C0CCA92BEB18E700825E1C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5C0CCA82BEB18E700825E1C /* main.mm */; };
+		C5F869D22C1AC4DF00AEFC70 /* MP3Helper.c in Sources */ = {isa = PBXBuildFile; fileRef = C5F869D12C1AC4DF00AEFC70 /* MP3Helper.c */; };
+		C5F869D52C1AEB8D00AEFC70 /* MP3Util.c in Sources */ = {isa = PBXBuildFile; fileRef = C5F869D42C1AEB8D00AEFC70 /* MP3Util.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +102,23 @@
 		C52745BC2C17F0DD001BC383 /* CString.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CString.c; sourceTree = "<group>"; };
 		C52745BE2C17F14C001BC383 /* CMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMain.h; sourceTree = "<group>"; };
 		C52745BF2C17F14C001BC383 /* CMain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CMain.c; sourceTree = "<group>"; };
+		C52745E32C198B31001BC383 /* OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52745E52C198B31001BC383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C52745E62C198B31001BC383 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C52745E82C198B31001BC383 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C52745E92C198B31001BC383 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C52745EB2C198B31001BC383 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C52745EC2C198B31001BC383 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C52745EF2C198B31001BC383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C52745F12C198B32001BC383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C52745F42C198B32001BC383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C52745F62C198B32001BC383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52745F72C198B32001BC383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C52745FC2C198B42001BC383 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		C52745FD2C198B42001BC383 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		C52746002C1997C5001BC383 /* Chasing Dreams.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Chasing Dreams.mp3"; sourceTree = "<group>"; };
+		C52746052C199D00001BC383 /* AudioHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioHelper.h; sourceTree = "<group>"; };
+		C52746062C199D00001BC383 /* AudioHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioHelper.m; sourceTree = "<group>"; };
 		C52F7C722BA9277700374C7F /* SwiftComponentExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftComponentExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52F7C742BA9277700374C7F /* SwiftComponentExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftComponentExampleTests.swift; sourceTree = "<group>"; };
 		C53FE6732C0D570300401588 /* Lexical.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lexical.h; sourceTree = "<group>"; };
@@ -120,9 +149,23 @@
 		C5C0CCA62BEB18E700825E1C /* MainOC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MainOC; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C0CCA82BEB18E700825E1C /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		C5C0CCAD2BEB4F8D00825E1C /* Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runtime.h; sourceTree = "<group>"; };
+		C5F869CA2C1ABACA00AEFC70 /* MP3Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP3Defines.h; sourceTree = "<group>"; };
+		C5F869CB2C1ABAEE00AEFC70 /* MP3Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP3Header.h; sourceTree = "<group>"; };
+		C5F869D02C1AC4DF00AEFC70 /* MP3Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP3Helper.h; sourceTree = "<group>"; };
+		C5F869D12C1AC4DF00AEFC70 /* MP3Helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MP3Helper.c; sourceTree = "<group>"; };
+		C5F869D32C1AEB8D00AEFC70 /* MP3Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MP3Util.h; sourceTree = "<group>"; };
+		C5F869D42C1AEB8D00AEFC70 /* MP3Util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MP3Util.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C52745E02C198B31001BC383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52745FF2C198B42001BC383 /* libmp3lame.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C52F7C6F2BA9277700374C7F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +213,38 @@
 				C52745BF2C17F14C001BC383 /* CMain.c */,
 			);
 			path = C;
+			sourceTree = "<group>";
+		};
+		C52745E42C198B31001BC383 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				C5F869C62C1A8C9A00AEFC70 /* Mp3 */,
+				C52746002C1997C5001BC383 /* Chasing Dreams.mp3 */,
+				C52745FE2C198B42001BC383 /* lame */,
+				C52745E52C198B31001BC383 /* AppDelegate.h */,
+				C52745E62C198B31001BC383 /* AppDelegate.m */,
+				C52746052C199D00001BC383 /* AudioHelper.h */,
+				C52746062C199D00001BC383 /* AudioHelper.m */,
+				C52745E82C198B31001BC383 /* SceneDelegate.h */,
+				C52745E92C198B31001BC383 /* SceneDelegate.m */,
+				C52745EB2C198B31001BC383 /* ViewController.h */,
+				C52745EC2C198B31001BC383 /* ViewController.m */,
+				C52745EE2C198B31001BC383 /* Main.storyboard */,
+				C52745F12C198B32001BC383 /* Assets.xcassets */,
+				C52745F32C198B32001BC383 /* LaunchScreen.storyboard */,
+				C52745F62C198B32001BC383 /* Info.plist */,
+				C52745F72C198B32001BC383 /* main.m */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		C52745FE2C198B42001BC383 /* lame */ = {
+			isa = PBXGroup;
+			children = (
+				C52745FC2C198B42001BC383 /* lame.h */,
+				C52745FD2C198B42001BC383 /* libmp3lame.a */,
+			);
+			path = lame;
 			sourceTree = "<group>";
 		};
 		C52F7C732BA9277700374C7F /* SwiftComponentExampleTests */ = {
@@ -237,6 +312,7 @@
 				C54144FC2BD89B72002C1658 /* MainC++ */,
 				C541453C2BD94059002C1658 /* MainSwift */,
 				C5C0CCA72BEB18E700825E1C /* MainOC */,
+				C52745E42C198B31001BC383 /* OC */,
 				C54A2B7D2B81E95C005E2159 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -249,6 +325,7 @@
 				C54144FB2BD89B72002C1658 /* MainC++ */,
 				C541453B2BD94059002C1658 /* MainSwift */,
 				C5C0CCA62BEB18E700825E1C /* MainOC */,
+				C52745E32C198B31001BC383 /* OC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,9 +375,39 @@
 			path = MainOC;
 			sourceTree = "<group>";
 		};
+		C5F869C62C1A8C9A00AEFC70 /* Mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				C5F869CA2C1ABACA00AEFC70 /* MP3Defines.h */,
+				C5F869CB2C1ABAEE00AEFC70 /* MP3Header.h */,
+				C5F869D02C1AC4DF00AEFC70 /* MP3Helper.h */,
+				C5F869D12C1AC4DF00AEFC70 /* MP3Helper.c */,
+				C5F869D32C1AEB8D00AEFC70 /* MP3Util.h */,
+				C5F869D42C1AEB8D00AEFC70 /* MP3Util.c */,
+			);
+			path = Mp3;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C52745E22C198B31001BC383 /* OC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52745F92C198B32001BC383 /* Build configuration list for PBXNativeTarget "OC" */;
+			buildPhases = (
+				C52745DF2C198B31001BC383 /* Sources */,
+				C52745E02C198B31001BC383 /* Frameworks */,
+				C52745E12C198B31001BC383 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OC;
+			productName = OC;
+			productReference = C52745E32C198B31001BC383 /* OC.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C52F7C712BA9277700374C7F /* SwiftComponentExampleTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C52F7C782BA9277700374C7F /* Build configuration list for PBXNativeTarget "SwiftComponentExampleTests" */;
@@ -398,6 +505,9 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					C52745E22C198B31001BC383 = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					C52F7C712BA9277700374C7F = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = C54A2B7B2B81E95C005E2159;
@@ -440,6 +550,7 @@
 				C54144FA2BD89B72002C1658 /* MainC++ */,
 				C541453A2BD94059002C1658 /* MainSwift */,
 				C5C0CCA52BEB18E700825E1C /* MainOC */,
+				C52745E22C198B31001BC383 /* OC */,
 			);
 		};
 /* End PBXProject section */
@@ -455,6 +566,17 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C52745E12C198B31001BC383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52745F22C198B32001BC383 /* Assets.xcassets in Resources */,
+				C52746012C1997C5001BC383 /* Chasing Dreams.mp3 in Resources */,
+				C52745F52C198B32001BC383 /* Base in Resources */,
+				C52745F02C198B31001BC383 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C52F7C702BA9277700374C7F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +598,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C52745DF2C198B31001BC383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F869D22C1AC4DF00AEFC70 /* MP3Helper.c in Sources */,
+				C52745ED2C198B31001BC383 /* ViewController.m in Sources */,
+				C52745E72C198B31001BC383 /* AppDelegate.m in Sources */,
+				C52745F82C198B32001BC383 /* main.m in Sources */,
+				C52745EA2C198B31001BC383 /* SceneDelegate.m in Sources */,
+				C52746072C199D00001BC383 /* AudioHelper.m in Sources */,
+				C5F869D52C1AEB8D00AEFC70 /* MP3Util.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C52F7C6E2BA9277700374C7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,6 +680,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C52745EE2C198B31001BC383 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52745EF2C198B31001BC383 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C52745F32C198B32001BC383 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52745F42C198B32001BC383 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		C54A2B852B81E95C005E2159 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -563,6 +715,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C52745FA2C198B32001BC383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OC/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OC/lame",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unnoo.quan.OC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C52745FB2C198B32001BC383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OC/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OC/lame",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unnoo.quan.OC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C52F7C792BA9277700374C7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -603,6 +817,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MainC++/lame",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -613,6 +831,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MainC++/lame",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -779,6 +1001,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftComponentExample/lame",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.unnoo.quan.SwiftComponentExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -806,6 +1032,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftComponentExample/lame",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.unnoo.quan.SwiftComponentExample;
@@ -839,6 +1069,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C52745F92C198B32001BC383 /* Build configuration list for PBXNativeTarget "OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52745FA2C198B32001BC383 /* Debug */,
+				C52745FB2C198B32001BC383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C52F7C782BA9277700374C7F /* Build configuration list for PBXNativeTarget "SwiftComponentExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -9,7 +9,10 @@
 #include "Header.h"
 
 int main(int argc, const char * argv[]) {
+    lame_init();
+
     testCMain();
+    test();
 
     auto r0 = Z::max(20, 10);
     std::cout<<r0<<std::endl;

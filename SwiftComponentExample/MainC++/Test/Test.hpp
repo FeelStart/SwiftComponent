@@ -14,4 +14,6 @@ template<class T>
 class Test {
 };
 
+void test(void);
+
 #endif /* Test_hpp */
