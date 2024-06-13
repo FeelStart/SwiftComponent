@@ -10,6 +10,11 @@
 
 #include <stdio.h>
 
-size_t mp3_convertCharArrayToIngetal(uint8_t *value, size_t size, size_t mask);
+/// eg: mask = 0b11111111
+size_t mp3_convertCharsToIngetal(uint8_t *value, size_t size, uint8_t exponent);
+
+size_t mp3_powCharsToIngetal(uint8_t *value, size_t size, uint8_t exponent);
+
+char *mp3_uintsToChars(uint8_t *value, size_t size);
 
 #endif /* MP3Util_h */

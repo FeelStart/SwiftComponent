@@ -8,12 +8,13 @@
 #include "MP3Helper.h"
 #include "MP3Util.h"
 #include <string.h>
+#include <math.h>
 
 void mp3_test(FILE *file)
 {
     fseek(file, 0, SEEK_SET);
 
-    char data[100];
+    char data[100000];
     fread(data, sizeof(data), 1, file);
 
     printf("%s", data);
@@ -30,11 +31,7 @@ int mp3_get_tag2(FILE *file, MP3TAG2 *tag)
 
 size_t mp3_get_tag2_size(MP3TAG2 tag)
 {
-    char *size = tag.size;
-    return size[3] & 0x0111 + 
-        size[2] & 0x0111 * 16 +
-        size[1] & 0x0111 * (16 ^ 2) +
-        size[0] & 0x0111 * (16 ^ 3);
+    return mp3_powCharsToIngetal(tag.size, 4, pow(2, 7));
 }
 
 size_t mp3_get_tag2_header_size(MP3TAG2 tag)
@@ -47,38 +44,35 @@ void mp3_tag2_dump(FILE *file, MP3TAG2 tag)
 {
     mp3_test(file);
 
-    size_t size = mp3_get_tag2_size(tag);
-    size_t readCount = 0;
+    size_t totalsize = mp3_get_tag2_size(tag);
+    size_t totalReadCount = 0;
 
     fseek(file, 10, SEEK_SET);
 
     do {
         MP3TAG2FrameHeader header;
         size_t headerSize = sizeof(header);
-        readCount += fread(&header, headerSize, 1, file) * headerSize;
+        fread(&header, headerSize, 1, file);
 
-        size_t size = mp3_convertCharArrayToIngetal(header.size, 4, 0x1111);
-        readCount += size;
+        size_t bodySize = mp3_convertCharsToIngetal(header.size, 4, 0b1111111);
 
         char *identifier = mp3_tag3_identifier_detail(header);
-        char description[size - 1];
 
-        // header 后面 1 byte == 00
-        fseek(file, 10 + readCount + 1, SEEK_SET);
+        char m_body[bodySize];
+        fread(m_body, bodySize, 1, file);
 
-        char m_description[size - 1];
-        fread(m_description, size - 1, 1, file);
+        totalReadCount += headerSize + bodySize;
 
-        int i;
+        printf("%s", identifier);
 
-    } while(readCount < size);
+    } while(totalReadCount < totalsize);
 }
 
 #pragma mark - Other
 
 char *mp3_tag3_identifier_detail(MP3TAG2FrameHeader header)
 {
-    char *identifier = header.identifier;
+    char *identifier = mp3_uintsToChars(header.identifier, 4);
     if (strcmp(identifier, "Iden") == 0) {
         return "Description";
     } else if (strcmp(identifier, "TRCK") == 0) {
